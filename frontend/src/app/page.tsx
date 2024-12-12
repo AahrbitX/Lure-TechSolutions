@@ -1,3 +1,15 @@
+import Home from "@/components/sections/Home"
+import About from "@/components/sections/About"
+import Service from "@/components/sections/Service"
+import Contact from "@/components/sections/Contact"
+
 export default function Page(){
-  return <h1>Welcome to Lure</h1>
+  return (
+    <main>
+      <Home/>
+      <About/>
+      <Service/>
+      <Contact/>
+    </main>
+  )
 }
