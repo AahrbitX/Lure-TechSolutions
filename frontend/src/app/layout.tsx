@@ -11,8 +11,7 @@ export default function PageLayout({
 {
   return (
     <html lang="en">
-
-      <body>
+      <body className="w-[95%]">
         <Navbar/>
           {children}
         <Footer/>

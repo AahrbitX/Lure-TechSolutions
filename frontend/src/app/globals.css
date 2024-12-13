@@ -1,8 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
 
 :root {
   --green: #54af33;
@@ -16,4 +15,9 @@
     --white: #ffffff;
     --black: #000000;
   }
+}
+
+body {
+  padding: 0%;
+  margin: 0%;
 }
