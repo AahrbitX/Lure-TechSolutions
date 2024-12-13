@@ -1,6 +1,8 @@
 
 import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
+import './globals.css'
+
 
 export default function PageLayout({
   children,
@@ -9,6 +11,7 @@ export default function PageLayout({
 {
   return (
     <html lang="en">
+
       <body>
         <Navbar/>
           {children}
@@ -16,5 +19,4 @@ export default function PageLayout({
       </body>
     </html>
   )
-
 }
