@@ -3,7 +3,7 @@ const Home = ()=>{
 
     return(
         <div>
-            <h1>Welcome to Lure</h1>
+            <h1 className="font-customFonts text-cgreen">Welcome to Lure</h1>
         </div>
     )
 } 

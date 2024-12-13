@@ -1,21 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --green: #54af33;
+  --white: #ffffff;
+  --black: #000000;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --green: #54af33;
+    --white: #ffffff;
+    --black: #000000;
   }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
 }

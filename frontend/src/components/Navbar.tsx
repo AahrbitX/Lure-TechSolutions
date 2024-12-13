@@ -3,7 +3,7 @@ const Navbar=()=>{
 
     return(
         <div>
-            <p>nav</p>
+            <p className="font-sans" >nav</p>
         </div>
     )
 }
