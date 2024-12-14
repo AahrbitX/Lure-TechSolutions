@@ -11,7 +11,7 @@ export default function PageLayout({
 {
   return (
     <html lang="en">
-      <body className="w-[95%]">
+      <body className="w-[95%] overflow-x-hidden">
         <Navbar/>
           {children}
         <Footer/>

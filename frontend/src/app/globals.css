@@ -22,3 +22,14 @@ body {
   margin: 0%;
   font-family: "Poppins", sans-serif;
 }
+
+@layer components {
+  .sections {
+    margin: 2.5%;
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 500px;
+    width: 100%;
+    background-color: #000000;
+  }
+}
