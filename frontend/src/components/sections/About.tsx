@@ -1,7 +1,7 @@
 const About =()=>{
     
     return(
-        <div>
+        <div className="sections">
             <h1 className="text-amber-600">
                 About us
             </h1>
