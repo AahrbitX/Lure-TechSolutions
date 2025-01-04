@@ -1,10 +1,17 @@
-const Service = () => {
+import Cards from "../cards";
+import Heading from "../heading";
 
-    return(
-        <div className="sections">
-            <h1>Our Services</h1>
+const Service = () => {
+    return (
+        <div className="sections h-[900px]">
+            <Heading value={"Our Service"} />
+            
+            {/* Each Cards component can be customized individually */}
+            <div>
+                <Cards />
+            </div>
         </div>
-    )
-}
+    );
+};
 
 export default Service;
