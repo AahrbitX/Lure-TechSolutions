@@ -1,28 +1,44 @@
-import React from "react";
-import Heading from "../heading";
-import Image from "next/image";
-import {clients} from "../assets";
+'use client';
 
-const Clients = () => {
+import React from "react";
+import { InfiniteMovingCards } from "../ui/infinite-moving-cards";
+import Logo from "../../../public/assets/logo/Lure.png"
+
+
+export function Clients() {
   return (
-    <div className="bg-cgreen w-full sections pt-40 rounded-b-3xl">
-      {/* Heading Section */}
-      <Heading value="Our Clients" color="white" />
-      {/* Logos Section */}
-      <div className="w-full flex justify-center pt-2 flex-wrap gap-4">
-        {clients.map((client, index) => (
-          <Image
-            key={index}
-            src={client}
-            alt={`Client Logo ${index + 1}`}
-            width={200}
-            height={200}
-            className="rounded-lg"
-          />
-        ))}
-      </div>
+    <div className="w-screen h-fit p-0 rounded-md flex flex-col antialiased items-center justify-center relative -top-44 overflow-hidden">
+      <InfiniteMovingCards
+        items={testimonials}
+        direction="left"
+        speed="fast"/>
     </div>
   );
-};
+}
 
-export default Clients;
+const testimonials = [
+  {
+    icon: Logo
+  },
+  {
+    icon: Logo
+  },
+  {
+    icon: Logo
+  },
+  {
+    icon: Logo
+  },
+  {
+    icon: Logo
+  },
+  {
+    icon: Logo
+  },
+  {
+    icon: Logo
+  },
+  {
+    icon: Logo
+  },
+];

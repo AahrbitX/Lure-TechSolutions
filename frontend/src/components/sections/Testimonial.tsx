@@ -2,13 +2,15 @@
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import React from "react";
+import React, { useEffect } from "react";
 import Heading from "../heading";
 import TestimonialCard from "../testimonialCard";
 import Slider from "react-slick";
 import Image from "next/image";
 import QouteLeft from "../../../public/assets/icons/quote-left-solid.svg";
 import QouteRight from "../../../public/assets/icons/quote-right-solid.svg";
+import Aos from "aos";
+import "aos/dist/aos.css"; // Import AOS styles
 
 interface Testimonial {
   id: number;
@@ -46,23 +48,37 @@ const Testimonial: React.FC = () => {
     arrows: false,
   };
 
+
+    useEffect(() => {
+      Aos.init({
+        duration: 1000,
+        easing: "ease-in-out",
+        offset: 0,
+        delay: 50,
+        mirror: true,
+      });
+    }, []);
+
   return (
-    <div className="sections">
-      <Heading value="Testimonials" />
-      <div className="flex justify-between">
+    <div className="sections pt-60 h-[1200px]">
+      <Heading value="Testimonials" color="white" />
+      <div className="flex justify-between pt-40">
         {/* Left Content */}
         <div className="flex pt-10 justify-center items-start">
-          <h1 className="w-3/4 text-5xl font-normal">
-            Here is what our <span className="font-bold">clients</span> say about us
+          <h1 className="w-3/4 text-5xl font-normal text-white"data-aos="fade-down"
+      data-aos-anchor-placement="top-center">
+            Here is what our <span className="font-bold text-cgreen">clients</span> say about us
           </h1>
         </div>
 
         {/* Testimonial Slider */}
         <div className="testimonial-carousel w-1/2">
-          <div className="w-3/4 flex flex-col justify-end p-16">
+          <div className="w-3/4 flex flex-col justify-end p-16 bg-neutral-900 rounded-3xl shadow-2xl shadow-cgreen" 
+                data-aos="fade-left"
+                data-aos-anchor-placement="top-center">
             {/* Left Quote */}
             <div className="w-full flex justify-start">
-              <Image src={QouteLeft} alt="..." className="w-20 h-20 text-gray-400" />
+              <Image src={QouteLeft} alt="..." className="w-20 h-20 text-white" />
             </div>
 
             {/* Slider */}
@@ -78,7 +94,7 @@ const Testimonial: React.FC = () => {
 
             {/* Right Quote */}
             <div className="w-full flex justify-end">
-              <Image src={QouteRight} alt="..." className="w-20 h-20 text-gray-400" />
+              <Image src={QouteRight} alt="..." className="w-20 h-20 text-white" />
 
             </div>
           </div>
