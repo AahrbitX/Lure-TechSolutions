@@ -5,18 +5,20 @@ import About from "@/components/sections/About"
 import Service from "@/components/sections/Service"
 import Contact from "@/components/sections/Contact"
 import Testimonial from "@/components/sections/Testimonial"
-import Clients from "@/components/sections/Clients"
+import Feature from '../components/sections/Feature';
+import { Clients } from '../components/sections/Clients';
 
 
 
 export default function Page(){
   return (
-    <main>
+    <main className="relative">
       <Home/>
+      <Clients/>
       <About/>
-      <Clients />
-      <Testimonial/>
+      <Feature />
       <Service/>
+      <Testimonial/>
       <Contact/>
     </main>
   )

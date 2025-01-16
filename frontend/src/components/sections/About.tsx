@@ -1,63 +1,51 @@
 "use client";
 
-import Image from "next/image";
-import img from "../../../public/assets/images/media1.jpg";
-import Counter from "../couter";
-import Heading from "../heading";
-import arrow from "../../../public/assets/icons/arrow-right-solid.svg"
+import HeroVideoDialog from "../ui/hero-video-dialog";
+import React from "react";
+import { motion } from "framer-motion";
+import { LampContainer } from "../ui/lamp";
 
 const About = () => {
     return (
-        <div className="sections w-full h-[840px] relative">
-            {/* Heading Section */}
-            <Heading value={"About Us"} />
+        <div className="sections h-fit">
+            <LampContainer>
+                <motion.h1
+                    initial={{ opacity: 0.5, y: 100 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{
+                    delay: 0.3,
+                    duration: 0.8,
+                    ease: "easeInOut",
+                    }}
+                    className="bg-gradient-to-br from-slate-300 to-slate-500 bg-clip-text text-center text-2xl font-medium tracking-tight text-transparent md:text-4xl">
+                    <p className="text-white lg:text-6xl text-xl font-bold">The story of <span className="text-white">Innovation</span> & <span className="text-cgreen">Impact</span></p>
 
-            {/* About Section One */}
-            <div className="w-full justify-center md:flex">
-                {/* Years Counter */}
-                <div className="w-1/4 h-fit p-1 relative">
-                    <Counter value={4} />
-                    <p className="text-cgreen text-4xl w-1/2 text-right absolute right-32 top-40 pt-2">
-                        Years
-                    </p>
-                </div>
+                </motion.h1>
 
-                {/* Image Section */}
-                <div className="z-10 w-2/4">
-                    <Image
-                        src={img}
-                        className="rounded-[70px] w-full h-[500px]"
-                        alt="About Us Image"
+                <p className="w-[500px] text-white font-bold text-center m-20">We innovate tech solutions for your business growth. Let's build your brand together</p>
+
+                <div className="w-full justify-center flex">
+                <div className="relative w-[900px] rounded-3xl">
+                    <HeroVideoDialog
+                        className="dark:hidden block"
+                        animationStyle="top-in-bottom-out"
+                        videoSrc="https://www.youtube.com/embed/qh3NGpYRG3I?si=4rb-zSdDkVK9qxxb"
+                        thumbnailSrc="https://startup-template-sage.vercel.app/hero-light.png"
+                        thumbnailAlt="Hero Video"
+                    />
+                    <HeroVideoDialog
+                        className="hidden dark:block"
+                        animationStyle="top-in-bottom-out"
+                        videoSrc="https://www.youtube.com/embed/qh3NGpYRG3I?si=4rb-zSdDkVK9qxxb"
+                        thumbnailSrc="https://startup-template-sage.vercel.app/hero-dark.png"
+                        thumbnailAlt="Hero Video"
                     />
                 </div>
-
-                {/* Clients Counter */}
-                <div className="w-1/4 h-fit p-1 relative">
-                    <Counter value={40} />
-                    <p className="text-cgreen text-4xl w-1/2 text-right absolute right-32 top-40 pt-2">
-                        Clients
-                    </p>
-                </div>
             </div>
-
-            {/* About Section Two */}
-            <div className="bg-cgreen pt-[120px] pb-10 rounded-t-3xl absolute top-[485px] w-full">
-                <div className="w-full flex justify-center text-center">
-                    <p className="text-cwhite text-2xl w-1/2">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    </p>
-                </div>
-                <div className="flex justify-center pt-8">
-                    <a href="#" className="p-3 relative flex justify-center items-center bg-white w-60 rounded-full text-center text-cblack font-bold no-underline">
-                        Our Works 
-
-                        <div className="w-fit absolute right-6 flex justify-end items-center"><Image className="w-5 h-5 pl-10" src={arrow} alt="..."></Image></div>
-
-                    </a>
-                </div>
-            </div>
+            </LampContainer>
         </div>
+
+
     );
 };
-
 export default About;

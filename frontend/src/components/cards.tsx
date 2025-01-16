@@ -5,20 +5,19 @@ import "slick-carousel/slick/slick-theme.css";
 import React from "react";
 import Slider from "react-slick";
 import Image from "next/image";
+import type { StaticImageData } from 'next/image';
 import { services } from "./assets";
-import Heading from "./heading";
+import Heading from './heading';
+import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
+import Link from "next/link";
 
 // Define the type for card data
 interface CardData {
   id: number;
   title: string;
   description: string;
-  image: string;
+  image: string | StaticImageData;
 }
-
-// Dummy services array (replace with actual import if available)
-
-
 // Card data
 const cardData: CardData[] = [
   {
@@ -39,11 +38,12 @@ const cardData: CardData[] = [
     description: 'This is the description for Card 3',
     image: services[2],
   },
+
 ];
 
 const Cards: React.FC = () => {
   const settings = {
-    dots: false,
+    dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
@@ -57,19 +57,51 @@ const Cards: React.FC = () => {
     <div className="sections h-[800px]">
       <Slider {...settings}>
         {cardData.map((card) => (
-          <div key={card.id} className="w-60 mx-auto">
-            <div className="border border-gray-300 rounded-lg shadow-lg transition-transform hover:scale-105">
-              <Image
-                src={card.image}
-                alt={`${card.title} image`}
-                width={240}
-                height={160}
-                className="w-[500px] h-[500px] object-cover rounded-t-lg"
-              />
-              <div className="p-4">
-                <h3 className="text-xl font-bold text-gray-800">{card.title}</h3>
-              </div>
-            </div>
+          <div key={card.id} className="">
+              <CardContainer className="inter-var">
+                    <CardBody className="relative group/card shadow-2xl hover:shadow-cgreen bg-black border-cgreen/[0.2] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+                      <CardItem
+                        translateZ="50"
+                        className="text-xl font-bold text-neutral-600 dark:text-white"
+                      >
+                        {card.title}
+                      </CardItem>
+                      <CardItem
+                        as="p"
+                        translateZ="60"
+                        className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+                      >
+                        {card.description}
+                      </CardItem>
+                      <CardItem translateZ="100" className="w-full mt-4">
+                        <Image
+                          src={card.image}
+                          height="1000"
+                          width="1000"
+                          className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                          alt="thumbnail"
+                        />
+                      </CardItem>
+                      <div className="flex justify-between items-center mt-20">
+                        <CardItem
+                          translateZ={20}
+                          as={Link}
+                          href="https://twitter.com/mannupaaji"
+                          target="__blank"
+                          className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
+                        >
+                          Try now →
+                        </CardItem>
+                        <CardItem
+                          translateZ={20}
+                          as="button"
+                          className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
+                        >
+                          Sign up
+                        </CardItem>
+                      </div>
+                    </CardBody>
+                  </CardContainer>
           </div>
         ))}
       </Slider>
@@ -78,3 +110,7 @@ const Cards: React.FC = () => {
 };
 
 export default Cards;
+
+
+
+
