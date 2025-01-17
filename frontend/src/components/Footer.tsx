@@ -11,10 +11,10 @@ import eIcon from "../../public/assets/icons/envelope-solid.svg"
 
 export default function Footer() {
   return (
-    <footer className="w-screen rounded-t-3xl bg-cblack flex flex-col justify-between py-8">
+    <footer className="md:w-screen rounded-t-3xl bg-cblack md:flex md:flex-col md:justify-between py-8">
       {/* Navigation Links */}
-      <div className="w-full flex justify-center mb-6">
-        <ul className="flex list-none text-cwhite text-lg font-bold w-2/4 justify-around">
+      <div className="w-full md:flex md:flex-row flex flex-col justify-center mb-6">
+        <ul className="md:flex md:flex-row flex flex-col md:list-none text-cwhite text-lg font-bold md:w-2/4 w-full md:justify-around justify-center">
           {["Home", "About", "Clients", "Service", "Testimonials", "Contact"].map((item) => (
             <li
               key={item}
@@ -27,9 +27,9 @@ export default function Footer() {
       </div>
 
       {/* Contact Section */}
-      <div className="flex justify-between p-10">
+      <div className="md:flex flex flex-col w-full justify-between p-10">
         {/* Contact Info */}
-        <div className="w-fit flex flex-col gap-4">
+        <div className="md:w-fit w-full flex flex-col gap-4">
           <div className="flex items-center gap-2">
           <a href="#" className="hover:scale-105 transition-transform w-10 h-10 bg-cgreen flex justify-center items-center rounded-full">
             <Image src={phIcon} alt="Instagram" className="w-6 h-6" />
@@ -57,14 +57,14 @@ export default function Footer() {
         </div>
 
         {/* Logo or Additional Content */}
-        <div className="w-2/4 flex pl-28 justify-center items-center">
+        <div className="md:w-2/4  w-full flex md:pl-28 justify-center items-center">
           <Image src={Logo} alt="Footer Logo" className="w-[220px] h-[150px]" />
 
 
         </div>
 
         {/* Social Media Links */}
-        <div className="w-1/4 flex justify-evenly items-center">
+        <div className="md:w-1/4 w-full flex justify-evenly items-center">
           <a href="#" className="hover:scale-105 transition-transform w-10 h-10 bg-cgreen flex justify-center items-center rounded-full" >
             <Image src={liIcon} alt="Facebook" className="w-6 h-6" />
           </a>

@@ -18,14 +18,14 @@ const About = () => {
                     ease: "easeInOut",
                     }}
                     className="bg-gradient-to-br from-slate-300 to-slate-500 bg-clip-text text-center text-2xl font-medium tracking-tight text-transparent md:text-4xl">
-                    <p className="text-white lg:text-6xl text-xl font-bold">The story of <span className="text-white">Innovation</span> & <span className="text-cgreen">Impact</span></p>
+                    <p className="md:w-full w-[300px] text-white md:text-6xl text-2xl font-bold">The story of <span className="text-white">Innovation</span> & <span className="text-cgreen">Impact</span></p>
 
                 </motion.h1>
 
-                <p className="w-[500px] text-white font-bold text-center m-20">We innovate tech solutions for your business growth. Let's build your brand together</p>
+                <p className="md:w-[500px] w-[300px] text-white font-bold text-center m-20">We innovate tech solutions for your business growth. Let's build your brand together</p>
 
-                <div className="w-full justify-center flex">
-                <div className="relative w-[900px] rounded-3xl">
+                <div className="md:w-full w-[500px] justify-center flex">
+                <div className="relative md:w-[900px] w-[400px] rounded-3xl">
                     <HeroVideoDialog
                         className="dark:hidden block"
                         animationStyle="top-in-bottom-out"

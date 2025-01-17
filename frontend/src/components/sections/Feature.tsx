@@ -70,7 +70,7 @@ const Feature = () => {
             <div className="absolute inset-0 w-full h-full bg-black [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
         </div>
         </div>
-        <div className='grid grid-cols-3 gap-10'>
+        <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10'>
           {features.map((features,index)=>(
             <FeatureCard key={index} title={features.title} description={features.description} icon={features.icon}/>
           ))}

@@ -2,11 +2,11 @@ import Heading from "../heading";
 
 const Contact = () => {
   return (
-    <div className="sections h-[1000px] text-white">
-      <h1 className="text-6xl font-medium pl-20" >Would You Like To Build Your <br /> Blockbuster <span className="text-cgreen font-semibold" >(business-tech-brand)</span></h1>
-      <div className="h-fit flex justify-between p-20 pt-0">
+    <div className="sections h-fit text-white">
+      <h1 className=" md:w-full w-350 lg:text-6xl md:text-4xl text-3xl font-medium pl-20" >Would You Like To Build Your <br /> Blockbuster <span className="text-cgreen font-semibold" >(business-tech-brand)</span></h1>
+      <div className="h-fit md:flex flex flex-col justify-between p-20 pt-0">
       {/* Left Side: Contact Form */}
-      <div className="w-1/2 pt-20">
+      <div className="md:w-1/2 w-full pt-20">
         <form className="flex flex-col gap-6 mt-6">
           {/* Name Field */}
           <div className="flex flex-col p-2">
@@ -73,11 +73,8 @@ const Contact = () => {
       </div>
 
       {/* Right Side Content */}
-      <div className="w-1/2 flex flex-col justify-center items-start pl-10">
-        <h2 className="text-2xl font-bold text-cblack mb-4">Get in Touch</h2>
-        <p className="text-cblack text-lg mb-4">
-          We would love to hear from you. Please fill out the form and we will get back to you as soon as possible.
-        </p>
+      <div className="md:w-1/2 w-full h-fit flex justify-center p-10">
+        <h2 className="w-full h-full flex flex-col justify-center items-center text-2xl font-bold text-cblack mb-4 text-neutral-600">You're Just One <br /><span className="text-cgreen font-bold md:text-[150px] text-9xl">'YES'</span><br />Away From Sucess</h2>
       </div>
     </div>
 

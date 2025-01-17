@@ -62,7 +62,7 @@ const Testimonial: React.FC = () => {
   return (
     <div className="sections pt-60 h-[1200px]">
       <Heading value="Testimonials" color="white" />
-      <div className="flex justify-between pt-40">
+      <div className="md:flex flex flex-col md:justify-between  pt-40">
         {/* Left Content */}
         <div className="flex pt-10 justify-center items-start">
           <h1 className="w-3/4 text-5xl font-normal text-white"data-aos="fade-down"
@@ -72,8 +72,8 @@ const Testimonial: React.FC = () => {
         </div>
 
         {/* Testimonial Slider */}
-        <div className="testimonial-carousel w-1/2">
-          <div className="w-3/4 flex flex-col justify-end p-16 bg-neutral-900 rounded-3xl shadow-2xl shadow-cgreen" 
+        <div className="testimonial-carousel md:w-1/2 md:pt-0 pt-20">
+          <div className="md:w-3/4 flex flex-col justify-end p-16 bg-neutral-900 rounded-3xl shadow-2xl shadow-cgreen" 
                 data-aos="fade-left"
                 data-aos-anchor-placement="top-center">
             {/* Left Quote */}

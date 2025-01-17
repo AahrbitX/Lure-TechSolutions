@@ -21,22 +21,11 @@ const FeatureCard = ({
   description: string;
   icon: string | StaticImageData; // Ensure the type matches Image src
 }) => {
-  useEffect(() => {
-    Aos.init({
-      duration: 1000,
-      easing: "ease-in-out",
-      offset: 200,
-      delay: 50,
-      mirror: true,
-    });
-  }, []);
+
 
   return (
     <div
-      className="flex w-[40vh] relative h-fit items-center justify-center antialiased"
-      data-aos="fade-up"
-      data-aos-anchor-placement="top-center"
-    >
+      className="flex w-[40vh] relative h-fit items-center justify-center antialiased">
       <GlowingStarsBackgroundCard>
         <Image
           src={icon}
