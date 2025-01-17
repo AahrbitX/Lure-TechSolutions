@@ -46,11 +46,31 @@ const Cards: React.FC = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 3, // Default value
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
     arrows: false,
+    responsive: [
+      {
+        breakpoint: 1024, // Screen width <= 1024px
+        settings: {
+          slidesToShow: 2, // Show 2 slides
+        },
+      },
+      {
+        breakpoint: 768, // Screen width <= 768px
+        settings: {
+          slidesToShow: 1, // Show 1 slide
+        },
+      },
+      {
+        breakpoint: 480, // Screen width <= 480px
+        settings: {
+          slidesToShow: 1, // Show 1 slide
+        },
+      },
+    ],
   };
 
   return (
