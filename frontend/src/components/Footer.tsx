@@ -57,11 +57,11 @@ export default function Footer() {
         </div>
 
         {/* Logo or Additional Content */}
-        <div className="md:w-2/4  w-full flex md:pl-28 justify-center items-center">
+        {/* <div className="md:w-2/4  w-full flex md:pl-28 justify-center items-center">
           <Image src={Logo} alt="Footer Logo" className="w-[220px] h-[150px]" />
 
 
-        </div>
+        </div> */}
 
         {/* Social Media Links */}
         <div className="md:w-1/4 w-full flex justify-evenly items-center">

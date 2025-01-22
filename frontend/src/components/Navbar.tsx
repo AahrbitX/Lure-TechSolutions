@@ -4,7 +4,7 @@ import MenuBar from '../../public/assets/icons/menuBar.svg'
 import Close from '../../public/assets/icons/close.svg'
 import Image from 'next/image';
 import { useState } from 'react';
-import  Logo from "../../public/assets/logo/Lure.png"
+// import  Logo from "../../public/assets/logo/Lure.png"
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +14,7 @@ const Navbar = () => {
     return (
         <nav className="w-full h-[200px] flex justify-end top-0 overflow-hidden absolute z-30 right-6 p-4">
             
-            <Image src={Logo} alt="alt" width={120} height={90} className=' absolute left-20 top-9' />
+            {/* <Image src={Logo} alt="alt" width={120} height={90} className=' absolute left-20 top-9' /> */}
 
             <div className={`w-full absolute z-50 top-0 right-0 transform ${
                     isOpen ? "translate-x-0" : "sm:translate-x-full translate-x-full"
