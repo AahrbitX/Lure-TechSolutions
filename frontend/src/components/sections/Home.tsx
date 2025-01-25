@@ -41,13 +41,10 @@ const Home = ()=>{
                     duration: 0.5,
                     ease: [0.4, 0.0, 0.2, 1],
                     }}
-                    className="w-[500px] text-xl px-4 md:text-4xl lg:text-5xl font-bold text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto " >
-                        <div className="flex items-center justify-center">
-                            <TextHoverEffect text="Lure Tech" />
-                        </div>
+                    className="w-[500px] text-2xl px-4 md:text-4xl lg:text-5xl font-bold text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto " >
                 </motion.h1>
-                        <div className="App w-full text-end" >
-                            <p className='text-white text-5xl font-medium'>We Innovate Digitaly Your <span className='font-extrabold text-cgreen text-5xl w-full justify-end' ref={el} /></p>
+                        <div className="App w-full text-center" >
+                            <p className='text-white md:text-5xl sm:text-2xl text-xl font-medium'>We Innovate Digitaly Your <span className='font-extrabold text-cgreen md:text-5xl md:justify-end' ref={el} /></p>
                         </div>
             </HeroHighlight>
       );
