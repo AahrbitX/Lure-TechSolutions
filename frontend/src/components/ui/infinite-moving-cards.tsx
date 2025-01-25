@@ -87,7 +87,8 @@ export const InfiniteMovingCards = ({
       >
         {items.map((item, idx) => (
           <div className="bg-black flex justify-center">
-            <Image src={item.icon} alt="..." width={150} height={90}></Image>
+            
+            <Image src={item.icon} alt=".." width={150} height={90}></Image>
           </div>
         ))}
       </ul>

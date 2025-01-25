@@ -12,7 +12,7 @@ import { Clients } from '../components/sections/Clients';
 
 export default function Page(){
   return (
-    <main className="relative">
+    <main className="relative overflow-x-hidden">
       <Home/>
       <Clients/>
       <About/>
