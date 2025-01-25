@@ -2,7 +2,7 @@ import Heading from "../heading";
 
 const Contact = () => {
   return (
-    <div className="sections h-fit text-white">
+    <div className="w-screen overflow-hidden h-fit text-white">
       <h1 className=" md:w-full w-350 lg:text-6xl md:text-4xl text-3xl font-medium pl-20" >Would You Like To Build Your <br /> Blockbuster <span className="text-cgreen font-semibold" >(business-tech-brand)</span></h1>
       <div className="h-fit md:flex flex flex-col justify-between p-20 pt-0">
       {/* Left Side: Contact Form */}

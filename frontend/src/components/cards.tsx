@@ -7,7 +7,6 @@ import Slider from "react-slick";
 import Image from "next/image";
 import type { StaticImageData } from 'next/image';
 import { services } from "./assets";
-import Heading from './heading';
 import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
 import Link from "next/link";
 

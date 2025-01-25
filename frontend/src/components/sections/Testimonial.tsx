@@ -54,14 +54,13 @@ const Testimonial: React.FC = () => {
         duration: 1000,
         easing: "ease-in-out",
         offset: 0,
-        delay: 50,
+        delay: 10,
         mirror: true,
       });
     }, []);
 
   return (
-    <div className="sections pt-60 h-[1200px]">
-      <Heading value="Testimonials" color="white" />
+    <div className="w-screen overflow-hidden  h-[1200px] bg-slate-400">
       <div className="md:flex flex flex-col md:justify-between  pt-40">
         {/* Left Content */}
         <div className="flex pt-10 justify-center items-start">
