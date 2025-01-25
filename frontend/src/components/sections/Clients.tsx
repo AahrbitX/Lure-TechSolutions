@@ -27,11 +27,11 @@ export function Clients() {
 }
 
 const testimonials = [
-  { 
+  {
     id:1,
     icon: Logo1
   },
-  { 
+  {
     id:2,
     icon: Logo2
   },

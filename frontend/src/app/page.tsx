@@ -12,7 +12,7 @@ import { Clients } from '../components/sections/Clients';
 
 export default function Page(){
   return (
-    <main className="relative overflow-x-hidden">
+    <main className="relative w-screen overflow-x-hidden">
       <Home/>
       <Clients/>
       <About/>

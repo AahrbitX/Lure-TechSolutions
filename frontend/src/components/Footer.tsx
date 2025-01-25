@@ -11,7 +11,7 @@ import eIcon from "../../public/assets/icons/envelope-solid.svg"
 
 export default function Footer() {
   return (
-    <footer className="md:w-screen rounded-t-3xl bg-cblack md:flex md:flex-col md:justify-between py-8">
+    <footer className="md:w-screen w-screen overflow-hidden rounded-t-3xl bg-cblack md:flex md:flex-col md:justify-between py-8">
       {/* Navigation Links */}
       <div className="w-full md:flex md:flex-row flex flex-col justify-center mb-6">
         <ul className="md:flex md:flex-row flex flex-col md:list-none text-cwhite text-lg font-bold md:w-2/4 w-full md:justify-around justify-center">
