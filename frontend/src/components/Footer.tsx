@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Logo from "../../public/assets/logo/Lure.png"
+import Logo from "../../public/assets/logo/LURE logo.svg"
 import inIcon from "../../public/assets/icons/instagram-brands-solid.svg"
 import liIcon from "../../public/assets/icons/linkedin-in-brands-solid.svg"
 import ytIcon from "../../public/assets/icons/youtube-brands-solid.svg"
@@ -13,9 +13,9 @@ export default function Footer() {
   return (
     <footer className="md:w-screen w-screen overflow-hidden rounded-t-3xl bg-cblack md:flex md:flex-col md:justify-between py-8">
       {/* Navigation Links */}
-      <div className="w-full md:flex md:flex-row flex flex-col justify-center mb-6">
-        <ul className="md:flex md:flex-row flex flex-col md:list-none text-cwhite text-lg font-bold md:w-2/4 w-full md:justify-around justify-center">
-          {["Home", "About", "Clients", "Service", "Testimonials", "Contact"].map((item) => (
+      <div className="flex flex-row justify-center items-center mb-6">
+        <ul className="flex md:list-none text-cwhite md:text-lg text-xs gap-5 font-bold md:w-2/4 w-full md:justify-around justify-center">
+          {["Home", "About", "Service", "Testimonials", "Contact"].map((item) => (
             <li
               key={item}
               className="hover:text-cgreen hover:scale-105 transition-transform duration-300 cursor-pointer"
@@ -27,7 +27,7 @@ export default function Footer() {
       </div>
 
       {/* Contact Section */}
-      <div className="md:flex flex flex-col w-full justify-between p-10">
+      <div className="md:flex flex md:flex-row flex-col w-full justify-between p-10">
         {/* Contact Info */}
         <div className="md:w-fit w-full flex flex-col gap-4">
           <div className="flex items-center gap-2">
@@ -57,11 +57,11 @@ export default function Footer() {
         </div>
 
         {/* Logo or Additional Content */}
-        {/* <div className="md:w-2/4  w-full flex md:pl-28 justify-center items-center">
-          <Image src={Logo} alt="Footer Logo" className="w-[220px] h-[150px]" />
+        <div className="md:w-2/4  w-full flex md:pl-28 justify-center items-center p-10">
+          <Image src={Logo} alt="Footer Logo" className="md:w-[220px] md:h-[150px] w-[100px] h-[100px]" />
 
 
-        </div> */}
+        </div>
 
         {/* Social Media Links */}
         <div className="md:w-1/4 w-full flex justify-evenly items-center">

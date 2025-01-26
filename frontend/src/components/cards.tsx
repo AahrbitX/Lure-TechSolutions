@@ -22,19 +22,19 @@ const cardData: CardData[] = [
   {
     id: 1,
     title: 'Digital Marketing',
-    description: 'Our Brand New Statergies, Help you to build your Brand',
+    description: 'Our Brand new Statergies, Help you to build your Brand. Why you for Contact us now',
     image: services[0],
   },
   {
     id: 2,
-    title: 'Card 2',
-    description: 'This is the description for Card 2',
+    title: 'Software Solutions',
+    description: 'We are the team of Expert Developer, Who worked on top MNC, We Build Solutions For your Business',
     image: services[1],
   },
   {
     id: 3,
-    title: 'Card 3',
-    description: 'This is the description for Card 3',
+    title: 'AI Solutions',
+    description: 'We Develop Custom AI solutions acording to the INdustry needs, with our EXpert AI Developer team',
     image: services[2],
   },
 
@@ -79,9 +79,20 @@ const Cards: React.FC = () => {
           <div key={card.id} className="">
               <CardContainer className="inter-var">
                     <CardBody className="relative group/card shadow-2xl hover:shadow-cgreen bg-black border-cgreen/[0.2] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+
+                      <CardItem translateZ="100" className="w-full mt-4">
+                        <Image
+                          src={card.image}
+                          height="1000"
+                          width="1000"
+                          className="h-64 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                          alt="thumbnail"
+                        />
+                      </CardItem>
+
                       <CardItem
                         translateZ="50"
-                        className="text-xl font-bold text-neutral-600 dark:text-white"
+                        className="text-xl font-bold text-cgreen pt-5"
                       >
                         {card.title}
                       </CardItem>
@@ -92,31 +103,15 @@ const Cards: React.FC = () => {
                       >
                         {card.description}
                       </CardItem>
-                      <CardItem translateZ="100" className="w-full mt-4">
-                        <Image
-                          src={card.image}
-                          height="1000"
-                          width="1000"
-                          className="h-72 w-72 object-cover rounded-xl group-hover/card:shadow-xl"
-                          alt="thumbnail"
-                        />
-                      </CardItem>
+
+
                       <div className="flex justify-between items-center mt-20">
                         <CardItem
                           translateZ={20}
-                          as={Link}
-                          href="https://twitter.com/mannupaaji"
-                          target="__blank"
-                          className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
-                        >
-                          Try now →
-                        </CardItem>
-                        <CardItem
-                          translateZ={20}
                           as="button"
-                          className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
+                          className="px-4 py-2 rounded-xl bg-cgreen dark:bg-white dark:text-black text-white text-xs font-bold"
                         >
-                          Sign up
+                          Get Offer Now
                         </CardItem>
                       </div>
                     </CardBody>
