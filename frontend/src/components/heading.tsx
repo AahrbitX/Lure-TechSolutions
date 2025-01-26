@@ -8,7 +8,7 @@ interface CounterProps {
 const Heading: React.FC<CounterProps> = ({ value, color = "black" }) => {
   return (
     <h1 
-      className={`w-full justify-center xl:text-7xl md:text-6xl sm:text-5xl text-center flex font-normal ${color === "white" ? "text-white" : "text-black"}`}
+      className={`w-full justify-center font-bold md:text-6xl text-2xl text-center flex pt-20 ${color === "white" ? "text-white" : "text-black"}`}
       style={{ color }}>
       {value}
     </h1>

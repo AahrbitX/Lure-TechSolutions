@@ -4,38 +4,44 @@ import React from 'react'
 import FeatureCard  from '../featurecard'
 import { TextAnimate } from "../ui/text-animate";
 import { SparklesCore } from "../ui/sparkles";
-import Icon from "../../../public/assets/icons/linkedin-in-brands-solid.svg"
+import Icon1 from "../../../public/assets/icons/Fast.svg"
+import Icon2 from "../../../public/assets/icons/Custom.svg"
+import Icon3 from "../../../public/assets/icons/Security.svg"
+import Icon4 from "../../../public/assets/icons/scalable.svg"
+import Icon5 from "../../../public/assets/icons/marketing.svg"
+import Icon6 from "../../../public/assets/icons/branding.svg"
+
 
 const features = [
   {
     title: "Fast Performance",
     description: "Our solutions are optimized for speed and reliability, ensuring seamless user experience.",
-    icon: Icon,
+    icon: Icon1,
   },
   {
     title: "Customizable Solutions",
     description: "Tailor-made software solutions designed to fit your specific business needs.",
-    icon: Icon, // DefaultIcon will be used here
+    icon: Icon2, // DefaultIcon will be used here
   },
   {
     title: "High Security",
     description: "We prioritize security in every aspect of development, ensuring your data is always safe.",
-    icon: Icon,
+    icon: Icon3,
   },
   {
     title: "Scalable Growth",
     description: "Our solutions are built with scalability in mind, ready to grow as your business expands.",
-    icon: Icon,
+    icon: Icon4,
   },
   {
     title: "Digital Marketing",
     description: "Boost your online presence with our strategic digital marketing solutions and branding.",
-    icon: Icon,
+    icon: Icon5,
   },
   {
     title: "Innovative Branding",
     description: "We create unique branding strategies that help your business stand out in the market.",
-    icon: Icon,
+    icon: Icon6,
   },
 ];
 
@@ -44,9 +50,9 @@ const Feature = () => {
     <div className='pt-0 w-screen h-fit flex flex-col justify-evenly items-center overflow-hidden'>
 
         <div className="h-[20rem] w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
-        <h1 className="md:text-7xl text-3xl font-bold text-center text-white relative z-20 p-10">
+        <h1 className="md:text-6xl text-2xl font-bold text-center text-white relative z-20 p-10">
             <TextAnimate animation="blurInUp" by="character">
-                Our Main features
+              Experience the Difference
             </TextAnimate>
         </h1>
         <div className="w-[60rem] h-60 relative">

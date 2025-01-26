@@ -22,7 +22,7 @@ export const GlowingStarsBackgroundCard = ({
         setMouseEnter(false);
       }}
       className={cn(
-        "bg-[linear-gradient(110deg,#282828,#242424)] p-4 max-w-md max-h-[20rem] h-full w-full rounded-xl",
+        "bg-[linear-gradient(110deg,#282828,#242424)] p-4 max-w-md h-fit w-full rounded-xl",
         className
       )}
     >
@@ -83,7 +83,7 @@ export const Illustration = ({ mouseEnter }: { mouseEnter: boolean }) => {
 
   return (
     <div
-      className="h-48 p-1 w-full"
+      className="h-36 p-1 w-full"
       style={{
         display: "grid",
         gridTemplateColumns: `repeat(${columns}, 1fr)`,
@@ -123,7 +123,7 @@ const Star = ({ isGlowing, delay }: { isGlowing: boolean; delay: number }) => {
       }}
       animate={{
         scale: isGlowing ? [1, 1.2, 2.5, 2.2, 1.5] : 1,
-        background: isGlowing ? "#fff" : "#666",
+        background: isGlowing ? "#54af33" : "#666",
       }}
       transition={{
         duration: 2,

@@ -25,16 +25,16 @@ const FeatureCard = ({
 
   return (
     <div
-      className="flex w-[40vh] relative h-fit items-center justify-center antialiased">
+      className="flex w-[30vh] md:w-[40vh] relative h-fit p-2 items-center justify-center">
       <GlowingStarsBackgroundCard>
         <Image
           src={icon}
           alt="Feature Icon"
-          className="h-[100px] w-[100px] absolute top-10 left-5 z-40 rounded-3xl bg-cgreen flex items-center justify-center"
+          className="h-[100px] w-[100px] absolute top-16 left-16 p-5 z-40 rounded-3xl bg-transparent flex items-center justify-center"
         />
 
         <GlowingStarsTitle>{title}</GlowingStarsTitle>
-        <div className="flex justify-between items-end">
+        <div className="flex p-2 justify-between items-center">
           <GlowingStarsDescription>{description}</GlowingStarsDescription>
         </div>
       </GlowingStarsBackgroundCard>
