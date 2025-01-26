@@ -21,8 +21,8 @@ interface CardData {
 const cardData: CardData[] = [
   {
     id: 1,
-    title: 'Card 1',
-    description: 'This is the description for Card 1',
+    title: 'Digital Marketing',
+    description: 'Our Brand New Statergies, Help you to build your Brand',
     image: services[0],
   },
   {
@@ -73,7 +73,7 @@ const Cards: React.FC = () => {
   };
 
   return (
-    <div className="sections h-[800px]">
+    <div className="h-[800px]">
       <Slider {...settings}>
         {cardData.map((card) => (
           <div key={card.id} className="">
@@ -97,7 +97,7 @@ const Cards: React.FC = () => {
                           src={card.image}
                           height="1000"
                           width="1000"
-                          className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                          className="h-72 w-72 object-cover rounded-xl group-hover/card:shadow-xl"
                           alt="thumbnail"
                         />
                       </CardItem>
