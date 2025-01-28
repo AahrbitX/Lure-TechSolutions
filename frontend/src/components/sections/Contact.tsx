@@ -4,7 +4,7 @@
 
 const Contact = () => {
   return (
-    <div className="w-screen overflow-hidden h-fit text-white md:p-20 p-10">
+    <div className="w-screen overflow-hidden h-fit text-white p-60">
       <h1 className=" md:w-full w-350 md:text-6xl font-bold text-center text-2xl" >Would You Like To Build Your <br /> Blockbuster <span className="text-cgreen font-semibold" >Business</span></h1>
       <div className="h-fit md:flex flex md:flex-row flex-col-reverse justify-center items-center p-10">
       {/* Left Side: Contact Form */}
@@ -74,7 +74,7 @@ const Contact = () => {
 
       {/* Right Side Content */}
       <div className="md:w-1/2 w-full h-fit flex justify-center p-10">
-        <h2 className="w-full h-full flex flex-col justify-center items-center md:text-2xl text-xl font-bold text-cblack mb-4 text-neutral-600">You're Just One <br /><span className="text-cgreen font-bold md:text-[150px] pt-5 flex justify-center items-center pb-5 md:text-9xl text-7xl">'YES'</span><br />Away From Sucess</h2>
+        <h2 className="w-full h-full flex flex-col justify-center items-center md:text-2xl text-xl font-bold text-cblack text-neutral-600">You're Just One <br /><span className="text-cgreen font-bold md:text-[150px] pt-5 pb-5 flex justify-center items-center md:text-9xl text-7xl">'YES'</span><br />Away From Sucess</h2>
       </div>
     </div>
 

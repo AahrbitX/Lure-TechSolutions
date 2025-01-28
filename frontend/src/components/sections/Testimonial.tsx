@@ -50,7 +50,7 @@ const Testimonial: React.FC = () => {
 
     useEffect(() => {
       Aos.init({
-        duration: 1000,
+        duration: 250,
         easing: "ease-in-out",
         offset: 0,
         delay: 10,
@@ -59,19 +59,18 @@ const Testimonial: React.FC = () => {
     }, []);
 
   return (
-    <div className="w-screen overflow-hidden  h-[1000px] md:pt-40 pt-20">
+    <div className="w-screen overflow-hidden h-[800px] pt-60">
       <div className="md:flex flex md:flex-row flex-col md:justify-between items-center pt-10">
         {/* Left Content */}
         <div className="flex justify-center items-start">
-          <h1 className="w-3/4 md:text-6xl text-2xl font-bold text-white"data-aos="fade-down"
-      data-aos-anchor-placement="top-center">
+          <h1 className="w-3/4 md:text-6xl text-2xl font-bold text-white"data-aos="fade-down" data-aos-anchor-placement="top-center">
             Here is what our <span className="font-bold text-cgreen">clients</span> say about us
           </h1>
         </div>
 
         {/* Testimonial Slider */}
         <div className="testimonial-carousel md:w-1/2 md:pt-0 flex justify-center items-center pt-10">
-          <div className="md:w-3/4 w-[350px] flex flex-col justify-end p-16 bg-neutral-900 rounded-3xl shadow-2xl shadow-cgreen" 
+          <div className="md:w-3/4 w-[350px] flex flex-col justify-end p-16 bg-neutral-900 rounded-3xl shadow-2xl shadow-cgreen"
                 data-aos="fade-left"
                 data-aos-anchor-placement="top-center">
             {/* Left Quote */}

@@ -3,7 +3,7 @@ import MenuBar from '../../public/assets/icons/menuBar.svg'
 import Close from '../../public/assets/icons/close.svg'
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
-import logo from "../../public/assets/logo/LURE logo.svg"
+import logo from "../../public/assets/logo/tech-solutions-logo.svg"
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);

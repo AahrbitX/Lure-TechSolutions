@@ -5,13 +5,15 @@ import { InfiniteMovingCards } from "../ui/infinite-moving-cards";
 import Logo1 from "../../../public/assets/logo/AahrbitX°.svg"
 import Logo2 from "../../../public/assets/logo/ButterBytes Made with Finesse.svg"
 import Logo3 from "../../../public/assets/logo/INIFINITY PIXELS studio.svg"
-import Logo4 from "../../../public/assets/logo/KANYAKUMARI POLYMERS.svg"
-import Logo5 from "../../../public/assets/logo/PIOUS Motor Park.svg"
+import Logo4 from "../../../public/assets/logo/polymers.svg"
+import Logo5 from "../../../public/assets/logo/pious logo.svg"
 import Logo6 from "../../../public/assets/logo/POMMI CATERS Elite Your Events.svg"
-import Logo7 from "../../../public/assets/logo/URBUN TREE INTERIO.svg"
-import Logo8 from "../../../public/assets/logo/VINS Automobile Glass.svg"
+import Logo7 from "../../../public/assets/logo/urban tree.svg"
+import Logo8 from "../../../public/assets/logo/vins aluminiyum.svg"
 import Logo9 from "../../../public/assets/logo/SEAMOON.svg"
-import Logo10 from "../../../public/assets/logo/LURE TECH SOLUTIONS we innovate digitally.svg"
+import Logo10 from "../../../public/assets/logo/lure-tech-solutions.svg"
+import Logo11 from "../../../public/assets/logo/VOG-enhanced-final.svg"
+import Logo12 from "../../../public/assets/logo/Make me up saloon logo.svg"
 
 
 
@@ -58,5 +60,11 @@ const testimonials = [
   },
   { id:10,
     icon: Logo10
+  },
+  { id:11,
+    icon: Logo11
+  },
+  { id:12,
+    icon: Logo12
   },
 ];

@@ -3,7 +3,6 @@
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 import { motion } from "framer-motion";
 import { HeroHighlight, Highlight } from "../ui/hero-highlight";
-import { TextHoverEffect } from "@/components/ui/text-hover-effect";
 import React from 'react';
 import Typed from 'typed.js';
 
@@ -43,8 +42,9 @@ const Home = ()=>{
                     }}
                     className="w-[500px] text-2xl px-4 md:text-4xl lg:text-5xl font-bold text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto " >
                 </motion.h1>
-                        <div className="App w-full text-center" >
-                            <p className='text-white md:text-5xl sm:text-2xl text-xl font-medium'>We Innovate Digitaly Your <span className='font-extrabold text-cgreen md:text-5xl md:justify-end' ref={el} /></p>
+                        <div className="App w-[800px] text-center" >
+                            <p className='text-white md:text-5xl sm:text-2xl text-xl font-medium'>Would You Like To Build Your
+                            Blockbuster <span className='font-extrabold text-cgreen md:text-5xl md:justify-end' ref={el} /></p>
                         </div>
             </HeroHighlight>
       );
