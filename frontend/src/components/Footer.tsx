@@ -15,12 +15,12 @@ export default function Footer() {
       {/* Navigation Links */}
       <div className="flex flex-row justify-center items-center mb-6">
         <ul className="flex md:list-none text-cwhite md:text-lg text-xs gap-5 font-bold md:w-2/4 w-full md:justify-around justify-center">
-          {["Home", "About", "Service", "Testimonials", "Contact"].map((item) => (
+          {["Home", "About", "Services", "Testimonials", "Contact"].map((item) => (
             <li
               key={item}
               className="hover:text-cgreen hover:scale-105 transition-transform duration-300 cursor-pointer"
             >
-              {item}
+            <a href={`#${item}`}>{item}</a>
             </li>
           ))}
         </ul>

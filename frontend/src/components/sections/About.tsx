@@ -7,7 +7,7 @@ import { LampContainer } from "../ui/lamp";
 
 const About = () => {
     return (
-        <div className="h-fit w-screen overflow-hidden">
+        <div className="h-fit w-screen overflow-hidden" id="About">
             <LampContainer>
                 <motion.h1
                     initial={{ opacity: 0.5, y: 100 }}

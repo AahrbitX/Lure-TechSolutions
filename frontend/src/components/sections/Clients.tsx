@@ -19,7 +19,7 @@ import Logo12 from "../../../public/assets/logo/Make me up saloon logo.svg"
 
 export function Clients() {
   return (
-    <div className="w-screen h-fit p-0 rounded-md flex flex-col antialiased items-center justify-center relative -top-44 overflow-hidden">
+    <div className="w-screen h-fit p-0 rounded-md flex flex-col antialiased items-center justify-center relative -top-44 overflow-hidden" id="Clients">
       <InfiniteMovingCards
         items={testimonials}
         direction="left"
