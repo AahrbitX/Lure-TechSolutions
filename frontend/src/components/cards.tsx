@@ -8,7 +8,6 @@ import Image from "next/image";
 import type { StaticImageData } from 'next/image';
 import { services } from "./assets";
 import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
-import Link from "next/link";
 
 // Define the type for card data
 interface CardData {
@@ -37,7 +36,6 @@ const cardData: CardData[] = [
     description: 'We Develop Custom AI solutions acording to the INdustry needs, with our EXpert AI Developer team',
     image: services[2],
   },
-
 ];
 
 const Cards: React.FC = () => {
@@ -45,28 +43,31 @@ const Cards: React.FC = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3, // Default value
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
-    arrows: false,
+    arrows: true,
     responsive: [
       {
-        breakpoint: 1024, // Screen width <= 1024px
+        breakpoint: 1200,
         settings: {
-          slidesToShow: 2, // Show 2 slides
+          slidesToShow: 2,
+          slidesToScroll: 1, // Ensure this is defined
         },
       },
       {
-        breakpoint: 768, // Screen width <= 768px
+        breakpoint: 768,
         settings: {
-          slidesToShow: 1, // Show 1 slide
+          slidesToShow: 1,
+          slidesToScroll: 1, // Ensure this is defined
         },
       },
       {
-        breakpoint: 480, // Screen width <= 480px
+        breakpoint: 480,
         settings: {
-          slidesToShow: 1, // Show 1 slide
+          slidesToShow: 1,
+          slidesToScroll: 1, // Ensure this is defined
         },
       },
     ],
@@ -78,7 +79,7 @@ const Cards: React.FC = () => {
         {cardData.map((card) => (
           <div key={card.id} className="">
               <CardContainer className="inter-var">
-                    <CardBody className="relative group/card shadow-2xl hover:shadow-cgreen bg-black border-cgreen/[0.2] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+                    <CardBody className="relative group/card shadow-2xl hover:shadow-cgreen border-cgreen/[0.2] sm:w-[30rem] md:w-[380px] rounded-xl p-6 border  ">
 
                       <CardItem translateZ="100" className="w-full mt-4">
                         <Image
@@ -103,8 +104,6 @@ const Cards: React.FC = () => {
                       >
                         {card.description}
                       </CardItem>
-
-
                       <div className="flex justify-between items-center mt-20">
                         <CardItem
                           translateZ={20}

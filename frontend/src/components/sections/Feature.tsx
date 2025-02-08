@@ -47,7 +47,7 @@ const features = [
 
 const Feature = () => {
   return (
-    <div className='pt-0 w-screen h-fit flex flex-col justify-evenly items-center overflow-hidden'>
+    <div className='pt-0 w-screen h-fit flex flex-col justify-evenly items-center overflow-hidden' id="Features">
 
         <div className="h-[20rem] w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
         <h1 className="md:text-6xl text-2xl font-bold text-center text-white relative z-20 p-10">

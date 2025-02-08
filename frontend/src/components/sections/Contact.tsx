@@ -4,8 +4,8 @@
 
 const Contact = () => {
   return (
-    <div className="w-screen overflow-hidden h-fit text-white p-60">
-      <h1 className=" md:w-full w-350 md:text-6xl font-bold text-center text-2xl" >Would You Like To Build Your <br /> Blockbuster <span className="text-cgreen font-semibold" >Business</span></h1>
+    <div className="w-screen overflow-hidden h-fit text-white lg:p-320 md:p-20 pt-40" id="Contact">
+      <h1 className=" md:w-full w-350 md:text-6xl font-bold text-center text-2xl" >Are You Ready to Create a Game-Changing<br /> <span className="text-cgreen font-semibold" >Business ? </span> </h1>
       <div className="h-fit md:flex flex md:flex-row flex-col-reverse justify-center items-center p-10">
       {/* Left Side: Contact Form */}
       <div className="md:w-1/2 w-full pt-20">

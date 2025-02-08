@@ -41,8 +41,8 @@ const Home = ()=>{
                     }}
                     className="w-[500px] text-2xl px-4 md:text-4xl lg:text-5xl font-bold text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto " >
                 </motion.h1>
-                        <div className="App md:w-[800px] w-[500px] text-center" >
-                            <p className='text-white md:text-5xl sm:text-2xl text-xl font-medium'>Would You Like To Build Your
+                        <div className="App  text-center w-full flex justify-center" >
+                            <p className='text-white md:text-5xl sm:text-2xl text-xl font-medium md:w-[800px] w-[300px]'>We Would Like To Build Your
                             Blockbuster <span className='font-extrabold text-cgreen md:text-5xl md:justify-end' ref={el} /></p>
                         </div>
             </HeroHighlight>
