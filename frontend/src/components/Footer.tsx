@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Logo from "../../public/assets/logo/LURE logo.svg"
+import Logo from "../../public/assets/logo/tech-solutions-logo.svg";
 import inIcon from "../../public/assets/icons/instagram-brands-solid.svg"
 import liIcon from "../../public/assets/icons/linkedin-in-brands-solid.svg"
 import ytIcon from "../../public/assets/icons/youtube-brands-solid.svg"
