@@ -14,7 +14,8 @@ export const InfiniteMovingCards = ({
   className,
 }: {
   items: {
-    icon:string | StaticImageData;
+    icon: string | StaticImageData;
+    id: number; // Ensure each item has a unique id
   }[];
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
@@ -27,7 +28,9 @@ export const InfiniteMovingCards = ({
   useEffect(() => {
     addAnimation();
   }, []);
+
   const [start, setStart] = useState(false);
+
   function addAnimation() {
     if (containerRef.current && scrollerRef.current) {
       const scrollerContent = Array.from(scrollerRef.current.children);
@@ -44,6 +47,7 @@ export const InfiniteMovingCards = ({
       setStart(true);
     }
   }
+
   const getDirection = () => {
     if (containerRef.current) {
       if (direction === "left") {
@@ -59,6 +63,7 @@ export const InfiniteMovingCards = ({
       }
     }
   };
+
   const getSpeed = () => {
     if (containerRef.current) {
       if (speed === "fast") {
@@ -70,26 +75,26 @@ export const InfiniteMovingCards = ({
       }
     }
   };
+
   return (
     <div
       ref={containerRef}
       className={cn(
-        "scroller relative z-20  max-w-7xl overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+        "scroller relative z-20 max-w-7xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
         className
       )}
     >
       <ul
         ref={scrollerRef}
         className={cn(
-          " flex min-w-full shrink-0 gap-20 w-max flex-nowrap",
-          start && "animate-scroll ",
+          "flex min-w-full shrink-0 gap-20 w-max flex-nowrap",
+          start && "animate-scroll"
         )}
       >
-        {items.map((item, idx) => (
-          <div className="bg-black flex justify-center">
-            
-            <Image src={item.icon} alt=".." width={150} height={90}></Image>
-          </div>
+        {items.map((item) => (
+          <li key={item.id} className="bg-black flex justify-center">
+            <Image src={item.icon} alt={`Icon ${item.id}`} width={150} height={90} />
+          </li>
         ))}
       </ul>
     </div>
