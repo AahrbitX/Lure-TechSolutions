@@ -11,18 +11,31 @@ module.exports = {
   darkMode: "class",
   theme: {
 	extend: {
-
-		animation: {
-			scroll:
-			  "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
-		  },
-		  keyframes: {
+    animation: {
+        halo: "halo 2.5s cubic-bezier(0.4, 0, 0.2, 1) infinite",
+        'halo-delay-200': "halo 2.5s cubic-bezier(0.4, 0, 0.2, 1) infinite 0.8s",
+        'halo-delay-400': "halo 2.5s cubic-bezier(0.4, 0, 0.2, 1) infinite 1.6s",
+		scroll:"scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+        donut: "donut 3s ease-out infinite"
+		},
+		keyframes: {
 			scroll: {
-			  to: {
+				to: {
 				transform: "translate(calc(-50% - 0.5rem))",
-			  },
+				},
 			},
-		  },
+				halo: {
+			"0%": { transform: "scale(1)", opacity: "0.7" },
+			"70%": { transform: "scale(1.25)", opacity: "0.2" },
+			"100%": { transform: "scale(1.5)", opacity: "0" },
+			},
+
+			donut: {
+          "0%": { transform: "scale(0.9)", opacity: "0.7" },
+          "70%": { transform: "scale(1.2)", opacity: "0.2" },
+          "100%": { transform: "scale(1.5)", opacity: "0" },
+        },
+		},
 		colors: {
 			cgreen: '#54af33',
 			cwhite: 'var(--white)',
