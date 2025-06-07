@@ -1,25 +1,31 @@
-'use clients'
+"use client";
 
-import Home from "@/components/sections/Home"
-import About from "@/components/sections/About"
-import Service from "@/components/sections/Service"
-import Contact from "@/components/sections/Contact"
-import Testimonial from "@/components/sections/Testimonial"
-import Feature from '../components/sections/Feature';
-import { Clients } from '../components/sections/Clients';
+// Use string path for public assets in Next.js
+const onTop = "/assets/on-top-image.svg";
+import React from "react";
+import HeroSection from "@/components/sections/HomeSection";
+import About from "@/components/sections/About";
+import Features from "@/components/sections/Features";
+import Testimonial from "@/components/sections/Testimonial";
+import NewsLetters from "@/components/sections/NewsLetters";
+import Achievements from "@/components/sections/achivements";
+import FAQSection from "@/components/sections/questions";
 
 
 
-export default function Page(){
+
+
+export default function Home() {
+
   return (
-    <main className="relative w-screen overflow-x-hidden">
-      <Home/>
-      <Clients/>
-      <About/>
-      <Feature />
-      <Service/>
-      <Testimonial/>
-      <Contact/>
+    <main className="min-h-screen bg-gradient-to-b from-black via-[#0a231a] to-black text-white relative">
+      <HeroSection />
+      <About />
+      <Features/>
+      <Achievements />
+      <FAQSection />
+      <Testimonial />
+      <NewsLetters />
     </main>
-  )
+  );
 }
