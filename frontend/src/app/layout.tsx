@@ -1,6 +1,6 @@
 
-import Navbar from "@/components/Navbar"
-import Footer from "@/components/Footer"
+import TopNavbar from "@/components/commons/TopNavbar"
+import Footer from "@/components/commons/Footer"
 import './globals.css'
 
 
@@ -11,10 +11,12 @@ export default function PageLayout({
 {
   return (
     <html lang="en">
+
+
       <body>
-        {/* <Navbar/> */}
+        <TopNavbar/>
           {children}
-        {/* <Footer/> */}
+        <Footer/>
       </body>
     </html>
   )
