@@ -2,19 +2,18 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-gradient-to-tr from-[#0a231a] via-[#181f1b] to-[#232323] pt-16 pb-8 text-gray-400 font-poppins border-t border-[#00ff0d]/10 relative overflow-hidden">
+    <footer className="w-full bg-gradient-to-tr from-[#0a231a] via-[#181f1b] to-[#232323] pt-12 pb-6 text-gray-400 font-poppins border-t border-[#00ff0d]/10 relative overflow-hidden">
       {/* Decorative Glow */}
-      <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-[600px] h-[200px] bg-[#00ff0d]/10 blur-3xl rounded-full pointer-events-none -z-10" />
-      <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between gap-12 relative z-10">
+      <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-[400px] sm:w-[600px] h-[120px] sm:h-[200px] bg-[#00ff0d]/10 blur-3xl rounded-full pointer-events-none -z-10" />
+      <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between gap-8 md:gap-12 relative z-10">
         {/* Logo & About */}
-        <div className="flex-1 mb-8 md:mb-0">
+        <div className="flex-1 mb-8 md:mb-0 min-w-[220px]">
           <div className="flex items-center gap-3 mb-2">
             <img
               src="/assets/images/lure-logo/tech-solutions-logo.svg"
               alt="LureTech Logo"
-              className="w-28 h-24"
+              className="w-20 h-16 sm:w-28 sm:h-24"
             />
-            {/* <span className="text-white font-extrabold text-2xl tracking-tight drop-shadow">Lure Tech Solutions</span> */}
           </div>
           <div className="text-[#bbf7d0] text-base mb-3 font-medium">
             Innovate Digitally.<br />
@@ -29,7 +28,7 @@ export default function Footer() {
           </div>
         </div>
         {/* Links */}
-        <div className="flex-1 grid grid-cols-2 md:grid-cols-3 gap-8">
+        <div className="flex-1 w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
           <div>
             <div className="font-semibold text-[#00ff0d] mb-3 uppercase tracking-wider">Pages</div>
             <ul className="space-y-2">
@@ -52,7 +51,7 @@ export default function Footer() {
           </div>
           <div>
             <div className="font-semibold text-[#00ff0d] mb-3 uppercase tracking-wider">Connect</div>
-            <div className="flex gap-4 mt-2">
+            <div className="flex gap-3 sm:gap-4 mt-2 flex-wrap">
               <a href="https://www.instagram.com/luretechsolutions" target="_blank" rel="noopener noreferrer" className="hover:text-[#00ff0d] transition" aria-label="Instagram">
                 <svg width="24" height="24" fill="currentColor"><path d="M21.35 2.65A3.37 3.37 0 0 0 18.67 2H5.33A3.37 3.37 0 0 0 2.65 2.65 3.37 3.37 0 0 0 2 5.33v13.34c0 .89.35 1.74.98 2.37A3.37 3.37 0 0 0 5.33 22h13.34c.89 0 1.74-.35 2.37-.98A3.37 3.37 0 0 0 22 18.67V5.33c0-.89-.35-1.74-.98-2.37zM20 18.67c0 .37-.15.72-.41.98a1.4 1.4 0 0 1-.98.41H5.33a1.4 1.4 0 0 1-.98-.41A1.4 1.4 0 0 1 4 18.67V5.33c0-.37.15-.72.41-.98.26-.26.61-.41.98-.41h13.34c.37 0 .72.15.98.41.26.26.41.61.41.98v13.34z"/><circle cx="12" cy="12" r="3.2"/></svg>
               </a>
@@ -70,9 +69,9 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="text-center text-xs text-gray-600 mt-12 relative z-10">
-        <span className="inline-block bg-[#181f1b] px-4 py-1 rounded-full border border-[#00ff0d]/30 text-white/80 shadow-sm">
-          © {new Date().getFullYear()} Lure Tech Solutions. All rights reserved. | <a href="https://luretechsolutions.com" className="hover:text-[#00ff0d] transition">luretechsolutions.com</a>
+      <div className="text-center text-xs text-gray-600 mt-8 sm:mt-12 relative z-10 px-2">
+        <span>
+          © {new Date().getFullYear()} Lure Tech Solutions. All rights reserved.
         </span>
       </div>
     </footer>
