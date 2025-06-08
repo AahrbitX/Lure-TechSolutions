@@ -62,74 +62,105 @@ export default function Testimonial() {
   return (
     <section className="relative z-10 max-w-5xl mx-auto px-4 py-24">
       <div className="flex justify-center mb-4">
-        <span className="px-4 py-1 rounded-full border border-[#00ff0d] text-[#00ff0d] font-semibold text-sm bg-black/70 flex items-center gap-2">
-          <span role="img" aria-label="star">✨</span> Testimonials
-        </span>
+      <span className="px-4 py-1 rounded-full border border-[#00ff0d] text-[#00ff0d] font-semibold text-sm bg-black/70 flex items-center gap-2">
+        <span role="img" aria-label="star">✨</span> Testimonials
+      </span>
       </div>
       <h2 className="text-3xl md:text-5xl font-extrabold mb-3 text-white text-center">
-        What our users are <span className="text-[#bbf7d0]">saying</span>
+      What our users are <span className="text-[#bbf7d0]">saying</span>
       </h2>
       <div className="text-[#bbf7d0] max-w-2xl mb-12 mx-auto text-center text-base md:text-lg">
-        Our AI platform has transformed our customer service operations, delivering remarkable efficiency and elevating our customer satisfaction to new heights.
+      Our AI platform has transformed our customer service operations, delivering remarkable efficiency and elevating our customer satisfaction to new heights.
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* Left column - Infinite scroll downwards */}
-        <div className="flex flex-col gap-6 overflow-hidden relative" style={{ height: "390px" }}>
-          <div className="flex flex-col gap-6 scroll-down">
-            {leftTestimonials.map((t, idx) => (
-              <div
-                key={t.name + "-left-" + idx}
-                className="bg-[#181f1b] border border-[#2e3e2e] rounded-xl p-6 shadow-lg flex flex-col min-h-[180px]"
-              >
-                <div className="text-white text-base mb-4">{t.message}</div>
-                <div className="flex items-center gap-3 mt-auto">
-                  <img src={t.avatar} alt={t.name} className="w-9 h-9 rounded-full border-2 border-[#00ff0d]" />
-                  <div>
-                    <div className="text-white font-semibold">{t.name}</div>
-                    <div className="text-[#bbf7d0] text-xs">{t.role}</div>
-                  </div>
-                </div>
-              </div>
-            ))}
+      {/* Desktop: 2 columns, Mobile: 1 column with all testimonials scrolling up */}
+      <div className="hidden md:grid grid-cols-1 md:grid-cols-2 gap-6">
+      {/* Left column - Infinite scroll downwards */}
+      <div className="flex flex-col gap-6 overflow-hidden relative" style={{ height: "390px" }}>
+        <div className="flex flex-col gap-6 scroll-down">
+        {leftTestimonials.map((t, idx) => (
+          <div
+          key={t.name + "-left-" + idx}
+          className="bg-[#181f1b] border border-[#2e3e2e] rounded-xl p-6 shadow-lg flex flex-col min-h-[180px]"
+          >
+          <div className="text-white text-base mb-4">{t.message}</div>
+          <div className="flex items-center gap-3 mt-auto">
+            <img src={t.avatar} alt={t.name} className="w-9 h-9 rounded-full border-2 border-[#00ff0d]" />
+            <div>
+            <div className="text-white font-semibold">{t.name}</div>
+            <div className="text-[#bbf7d0] text-xs">{t.role}</div>
+            </div>
+          </div>
+          </div>
+        ))}
+        </div>
+      </div>
+      {/* Right column - Infinite scroll upwards */}
+      <div className="flex flex-col gap-6 overflow-hidden relative" style={{ height: "390px" }}>
+        <div className="flex flex-col gap-6 scroll-up">
+        {rightTestimonials.map((t, idx) => (
+          <div
+          key={t.name + "-right-" + idx}
+          className="bg-[#181f1b] border border-[#2e3e2e] rounded-xl p-6 shadow-lg flex flex-col min-h-[180px]"
+          >
+          <div className="text-white text-base mb-4">{t.message}</div>
+          <div className="flex items-center gap-3 mt-auto">
+            <img src={t.avatar} alt={t.name} className="w-9 h-9 rounded-full border-2 border-[#00ff0d]" />
+            <div>
+            <div className="text-white font-semibold">{t.name}</div>
+            <div className="text-[#bbf7d0] text-xs">{t.role}</div>
+            </div>
+          </div>
+          </div>
+        ))}
+        </div>
+      </div>
+      </div>
+      {/* Mobile: Single column, all testimonials scroll up */}
+      <div className="md:hidden flex flex-col gap-6 overflow-hidden relative" style={{ height: "390px" }}>
+      <div className="flex flex-col gap-6 scroll-up-mobile">
+        {[...testimonials, ...testimonials].map((t, idx) => (
+        <div
+          key={t.name + "-mobile-" + idx}
+          className="bg-[#181f1b] border border-[#2e3e2e] rounded-xl p-6 shadow-lg flex flex-col min-h-[180px]"
+        >
+          <div className="text-white text-base mb-4">{t.message}</div>
+          <div className="flex items-center gap-3 mt-auto">
+          <img src={t.avatar} alt={t.name} className="w-9 h-9 rounded-full border-2 border-[#00ff0d]" />
+          <div>
+            <div className="text-white font-semibold">{t.name}</div>
+            <div className="text-[#bbf7d0] text-xs">{t.role}</div>
+          </div>
           </div>
         </div>
-        {/* Right column - Infinite scroll upwards */}
-        <div className="flex flex-col gap-6 overflow-hidden relative" style={{ height: "390px" }}>
-          <div className="flex flex-col gap-6 scroll-up">
-            {rightTestimonials.map((t, idx) => (
-              <div
-                key={t.name + "-right-" + idx}
-                className="bg-[#181f1b] border border-[#2e3e2e] rounded-xl p-6 shadow-lg flex flex-col min-h-[180px]"
-              >
-                <div className="text-white text-base mb-4">{t.message}</div>
-                <div className="flex items-center gap-3 mt-auto">
-                  <img src={t.avatar} alt={t.name} className="w-9 h-9 rounded-full border-2 border-[#00ff0d]" />
-                  <div>
-                    <div className="text-white font-semibold">{t.name}</div>
-                    <div className="text-[#bbf7d0] text-xs">{t.role}</div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        ))}
+      </div>
       </div>
       {/* Animations */}
       <style>{`
-        @keyframes scrollDown {
-          0% { transform: translateY(0); }
-          100% { transform: translateY(-50%); }
-        }
-        @keyframes scrollUp {
-          0% { transform: translateY(-50%); }
-          100% { transform: translateY(0); }
-        }
-        .scroll-down {
-          animation: scrollDown 14s linear infinite;
-        }
-        .scroll-up {
-          animation: scrollUp 14s linear infinite;
-        }
+      @keyframes scrollDown {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-50%); }
+      }
+      @keyframes scrollUp {
+        0% { transform: translateY(-50%); }
+        100% { transform: translateY(0); }
+      }
+      @keyframes scrollUpMobile {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-50%); }
+      }
+      .scroll-down {
+        animation: scrollDown 14s linear infinite;
+      }
+      .scroll-up {
+        animation: scrollUp 14s linear infinite;
+      }
+      .scroll-up-mobile {
+        animation: scrollUpMobile 18s linear infinite;
+      }
+      @media (max-width: 650px) {
+        .max-w-5xl { max-width: 100vw !important; }
+      }
       `}</style>
     </section>
   );
