@@ -3,6 +3,13 @@
 import React from "react";
 
 export default function Achievements() {
+  // const [avatars, setAvatars] = useState<{ url: string; alt: string }[]>([]);
+
+  const avatars = [1, 2, 3, 4].map((num) => ({
+    url: `https://api.dicebear.com/7.x/avataaars/svg?seed=User${num}`,
+    alt: `User ${num}`,
+  }));
+
   return (
     <section className="relative z-10 max-w-[1200px] mx-auto px-2 md:px-8 py-16 md:py-24 rounded-[2.5rem] overflow-hidden shadow-2xl border border-[#232323]">
       <svg className="absolute left-0 top-0 w-full h-full pointer-events-none z-0" fill="none">
@@ -52,10 +59,14 @@ export default function Achievements() {
         </div>
         <div className="flex-1 flex flex-col items-end justify-end">
           <div className="flex items-center gap-2 bg-[#181f1b] rounded-full px-4 py-2 shadow-lg border border-[#232323]">
-            <img src="/avatar1.jpg" alt="User 1" className="w-8 h-8 rounded-full border-2 border-white -ml-2 first:ml-0" />
-            <img src="/avatar2.jpg" alt="User 2" className="w-8 h-8 rounded-full border-2 border-white -ml-2" />
-            <img src="/avatar3.jpg" alt="User 3" className="w-8 h-8 rounded-full border-2 border-white -ml-2" />
-            <img src="/avatar4.jpg" alt="User 4" className="w-8 h-8 rounded-full border-2 border-white -ml-2" />
+            {avatars.map((avatar, idx) => (
+              <img
+                key={idx}
+                src={avatar.url}
+                alt={avatar.alt}
+                className={`w-8 h-8 rounded-full border-2 border-white -ml-2 ${idx === 0 ? "ml-0" : ""}`}
+              />
+            ))}
             <span className="text-[#00ff0d] text-base font-semibold ml-2">50+ Brands</span>
           </div>
         </div>

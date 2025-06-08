@@ -2,119 +2,151 @@ import React from "react";
 
 export default function About() {
   return (
-    <main className="bg-[#f6f8fa] min-h-screen text-[#222] font-sans">
-      {/* Header */}
-
-
-      {/* Hero Section */}
-      <section className="max-w-7xl mx-auto px-6 pt-16 pb-10 flex flex-col md:flex-row items-center gap-10 relative">
+  <div className="bg-[#000000] min-h-screen text-[#ffffff]  top-[20%] font-poppins py-24">
+      <section className="max-w-7xl mx-auto px-6 pt-32 pb-10 flex flex-col md:flex-row items-center gap-10 relative">
         <div className="flex-1">
-          <div className="text-[120px] md:text-[180px] font-extrabold text-gray-200 absolute left-0 top-0 z-0 select-none pointer-events-none" style={{letterSpacing: "-0.05em", lineHeight: 1}}>ABOUT</div>
-          <h1 className="relative z-10 text-4xl md:text-5xl font-extrabold mb-4">About 10.8</h1>
-          <p className="relative z-10 text-lg text-gray-600">We will kindly assist you anything.</p>
+          <div
+        className="text-[36px] md:text-[60px] font-extrabold text-[#181f1b] absolute left-0 top-0 z-0 select-none pointer-events-none"
+        style={{ letterSpacing: "-0.05em", lineHeight: 1 }}
+          >
+        WORDS FROM THE FOUNDER
+          </div>
+          <h1 className="relative z-10 text-4xl md:text-5xl font-extrabold mb-4 text-[#54AF33]">
+        NandhaKrishna, Founder of Lure Tech Solutions
+          </h1>
+          <p className="relative z-10 text-lg text-[#bbf7d0] mb-4 font-semibold">
+        "At Lure Tech Solutions, our mission is to empower brands and businesses to thrive in the digital era. We believe in the power of innovation, creativity, and collaboration to drive real growth and lasting impact. Every project we take on is a partnership—your vision becomes our mission. Thank you for trusting us to be a part of your journey."
+          </p>
         </div>
         <div className="flex-1 flex justify-end items-center relative z-10">
-          <div className="w-[220px] h-[220px] rounded-full overflow-hidden shadow-xl border-8 border-white">
-            <img src="/assets/about/hero.jpg" alt="About Hero" className="object-cover w-full h-full" />
+          <div className=" shadow-xl">
+        <img
+          src="/assets/images/person.png"
+          alt="NandhaKrishna, Founder"
+          className="object-cover w-full h-full"
+        />
           </div>
         </div>
       </section>
 
-      {/* Sharing is Caring */}
+      {/* Mission & Vision */}
       <section className="max-w-5xl mx-auto px-6 py-12 grid md:grid-cols-2 gap-10 items-center">
         <div className="space-y-6">
           <div className="rounded-2xl overflow-hidden shadow-lg">
-            <img src="/assets/about/office1.jpg" alt="Office" className="object-cover w-full h-48" />
-          </div>
-          <div className="rounded-2xl overflow-hidden shadow-lg">
-            <img src="/assets/about/office2.jpg" alt="Office" className="object-cover w-full h-48" />
+            <img
+              src="/assets/images/office.png"
+              alt="Office"
+              className="object-cover w-full h-48"
+            />
           </div>
         </div>
         <div>
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">Sharing is Caring</h2>
-          <p className="text-gray-600 mb-6">
-            At 10.8, we believe in the power of compassion, contribution, and action. Our model is simple: support those in need and create lasting change through expanding resources, empowering the underserved, and fostering collaboration. We are committed to making a difference—one act of kindness at a time.
+          <h2 className="text-2xl md:text-3xl font-bold mb-4 text-[#54AF33]">
+            Our Mission
+          </h2>
+          <p className="text-[#bbf7d0] mb-6">
+            To empower businesses and brands to thrive in the digital era by delivering innovative, data-driven, and creative solutions that drive real growth and lasting impact.
           </p>
+        </div>
+
+
+
+        <div>
+          <h2 className="text-2xl md:text-3xl font-bold mb-4 text-[#54AF33]">
+            Our Vision
+          </h2>
+          <p className="text-[#bbf7d0]">
+            To be the most trusted partner for digital transformation, recognized for our creativity, integrity, and results across India and beyond.
+          </p>
+        </div>
+        <div className="space-y-6">
           <div className="rounded-2xl overflow-hidden shadow-lg">
-            <img src="/assets/about/hand.jpg" alt="Helping Hand" className="object-cover w-full h-48" />
+            <img
+              src="/assets/images/workspace.png"
+              alt="Office"
+              className="object-cover w-full h-48"
+            />
           </div>
         </div>
       </section>
 
-      {/* The Secret of Living is Giving */}
-      <section className="max-w-5xl mx-auto px-6 py-12">
-        <h3 className="text-xl md:text-2xl font-bold mb-4">The Secret of Living is Giving</h3>
-        <p className="text-gray-600 mb-8">
-          At 10.8, we believe that true fulfillment comes from generosity. Every act of kindness, no matter how small it is, has the power to change a life. Giving is more than an action—it's a way of living, a mindset that transforms both the giver and the receiver.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="rounded-2xl overflow-hidden shadow-lg">
-            <img src="/assets/about/hallway.jpg" alt="Hallway" className="object-cover w-full h-48" />
-          </div>
-          <div className="rounded-2xl overflow-hidden shadow-lg">
-            <img src="/assets/about/emptyroom.jpg" alt="Empty Room" className="object-cover w-full h-48" />
-          </div>
+            {/* Founding Story */}
+          <section className="max-w-5xl mx-auto px-6 py-16 flex flex-col md:flex-row items-center gap-10">
+            {/* Left: Visual/Statue or Thematic Image */}
+            <div className="flex-1 flex justify-center items-center relative">
+              <div className="w-full md:w-[340px] h-[340px] bg-[#181f1b] rounded-3xl flex items-center justify-center shadow-2xl overflow-hidden">
+                <img
+                  src="/assets/images/inovation.png"
+                  alt="Founding Story"
+                  className="object-cover w-full h-full opacity-90"
+                />
+                <span className="absolute top-8 left-8 text-5xl font-extrabold text-[#54AF33] opacity-20 select-none pointer-events-none" style={{letterSpacing: "-0.05em"}}>STORY</span>
+              </div>
+            </div>
+            {/* Right: Text */}
+            <div className="flex-1 flex flex-col justify-center">
+              <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-[#54AF33] leading-tight">
+                Founding<br />Story
+              </h2>
+              <p className="text-[#bbf7d0] text-lg md:text-xl font-medium mb-4">
+                Lure Tech Solutions was born from a passion for creativity and a vision to bridge the gap between technology and business growth. Founded by a team of digital enthusiasts, we set out to empower brands of all sizes with innovative solutions that drive real results.
+              </p>
+              <p className="text-[#bbf7d0] text-base">
+                Our journey began with a simple belief: every business deserves a powerful digital presence and a partner who truly cares about their success.
+              </p>
+            </div>
+          </section>
+            
+            <section className="max-w-5xl mx-auto px-6 py-16 flex flex-col md:flex-row-reverse items-center gap-10">
+              {/* Left: Visual/Photo */}
+              <div className="flex-1 flex justify-center items-center relative">
+                <div className="w-full md:w-[340px] h-[340px] bg-[#181f1b] rounded-3xl flex items-center justify-center shadow-2xl overflow-hidden">
+                  <img
+                    src="/assets/images/promize.png"
+                    alt="Our Promise"
+                    className="object-cover w-full h-full opacity-90"
+                  />
+                  <span className="absolute top-8 left-8 text-5xl font-extrabold text-[#54AF33] opacity-20 select-none pointer-events-none" style={{letterSpacing: "-0.05em"}}>PROMISE</span>
+                </div>
+              </div>
+              {/* Right: Text */}
+              <div className="flex-1 flex flex-col justify-center">
+                <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-[#54AF33] leading-tight">
+                  Our Promise
+                </h2>
+                <p className="text-[#bbf7d0] text-xl md:text-2xl font-semibold italic">
+                  “We promise to deliver creative solutions, transparent communication, and real results—empowering your brand to stand out and succeed.”
+                </p>
+              </div>
+            </section>
+      <section className="relative max-w-5xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center justify-between gap-10 rounded-3xl overflow-hidden bg-gradient-to-br from-[#181f1b] via-[#232323] to-[#54AF33]/10 shadow-2xl mt-16">
+        {/* Glow/Accent Background */}
+        <div className="absolute inset-0 pointer-events-none z-0">
+          <div className="absolute right-0 top-0 w-2/3 h-full bg-gradient-to-tr from-[#54AF33]/30 via-[#232323]/60 to-transparent blur-2xl opacity-80 rounded-3xl" />
+          <div className="absolute left-0 bottom-0 w-1/3 h-1/2 bg-[#54AF33]/20 blur-2xl opacity-60 rounded-3xl" />
+        </div>
+        {/* Left: Tagline & Text */}
+        <div className="flex-1 z-10 text-left">
+          {/* <span className="inline-block mb-4 px-6 py-2 rounded-full bg-[#181f1b] border border-[#54AF33] text-[#54AF33] font-bold text-lg shadow-md tracking-wide">
+            
+          </span> */}
+          <h2 className="text-3xl md:text-4xl font-extrabold mb-2 text-white leading-tight drop-shadow">
+            You're Just One <span className="text-[#54AF33]">"Yes"</span> Away from Success.
+          </h2>
+          <p className="text-[#bbf7d0] text-lg mb-6 font-medium">
+            Take the leap—your next big win starts here.
+          </p>
+        </div>
+        {/* Right: CTA Button */}
+        <div className="flex-1 flex justify-center md:justify-end z-10">
+          <a
+            href="/contact"
+            className="px-10 py-4 rounded-full bg-[#54AF33] text-[#000] font-bold text-lg shadow-xl hover:bg-[#43a025] transition duration-300 ease-in-out border-2 border-[#54AF33] hover:scale-105"
+          >
+            Get in Touch
+          </a>
         </div>
       </section>
-
-      {/* Endless Possibilities to Share */}
-      <section className="max-w-5xl mx-auto px-6 py-12">
-        <h3 className="text-xl md:text-2xl font-bold mb-4">Endless Possibilities to Share</h3>
-        <p className="text-gray-600 mb-8">
-          At 10.8, we believe that generosity knows no limits. Every person has something valuable to share—whether it's time, resources, skills, or kindness. When we come together, we unlock possibilities to uplift, empower, and transform lives.
-        </p>
-        <div className="rounded-2xl overflow-hidden shadow-lg mb-8">
-          <img src="/assets/about/cafe.jpg" alt="Cafe" className="object-cover w-full h-48" />
-        </div>
-      </section>
-
-      {/* 4D Sharing */}
-      <section className="max-w-5xl mx-auto px-6 py-12">
-        <h3 className="text-xl md:text-2xl font-bold mb-6">4D Sharing in the 21st century</h3>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10">
-          <div className="bg-white rounded-xl shadow p-6 text-center">
-            <div className="font-bold text-lg mb-2">Designated</div>
-            <div className="text-gray-500 text-sm">지정</div>
-          </div>
-          <div className="bg-white rounded-xl shadow p-6 text-center">
-            <div className="font-bold text-lg mb-2">Delighted</div>
-            <div className="text-gray-500 text-sm">기쁨</div>
-          </div>
-          <div className="bg-white rounded-xl shadow p-6 text-center">
-            <div className="font-bold text-lg mb-2">Dedicated</div>
-            <div className="text-gray-500 text-sm">헌신</div>
-          </div>
-          <div className="bg-white rounded-xl shadow p-6 text-center">
-            <div className="font-bold text-lg mb-2">Dispersed</div>
-            <div className="text-gray-500 text-sm">분산</div>
-          </div>
-        </div>
-        <div className="rounded-2xl overflow-hidden shadow-lg">
-          <img src="/assets/about/group.jpg" alt="Group" className="object-cover w-full h-48" />
-        </div>
-      </section>
-
-      {/* Sharing in the 21st century */}
-      <section className="max-w-5xl mx-auto px-6 py-12">
-        <h3 className="text-xl md:text-2xl font-bold mb-4">
-          Sharing is the 21st century's new way of contribution to the community.
-        </h3>
-        <p className="text-gray-600 mb-6">
-          In today's world, giving is no longer just about donations—it's 4D sharing. Whether it's time, knowledge, skills, or resources, every contribution helps build stronger communities and creates opportunities for those in need.
-        </p>
-        <div className="flex items-center gap-2 mb-8">
-          <span className="text-[#00b894] font-semibold">Share.</span>
-          <span className="text-[#00b894] font-semibold">Support.</span>
-          <span className="text-[#00b894] font-semibold">Strengthen.</span>
-          <span className="text-gray-700">Together, we can make a lasting impact.</span>
-        </div>
-        <div className="rounded-2xl overflow-hidden shadow-lg">
-          <img src="/assets/about/celebration.jpg" alt="Celebration" className="object-cover w-full h-48" />
-        </div>
-      </section>
-
-      {/* Footer */}
-
-    </main>
+    </div>
   );
 }
