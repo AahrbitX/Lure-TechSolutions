@@ -3,8 +3,6 @@ import React, { useCallback } from "react";
 import { loadFull } from "tsparticles";
 import Clients from "../commons/clients";
 
-const onTop = "/assets/on-top-image.svg";
-
 export default function HeroSection() {
   const particlesInit = useCallback(async (engine: any) => {
     await loadFull(engine);
@@ -23,7 +21,7 @@ export default function HeroSection() {
         bounce={true}
       />
 
-      <div className="absolute top-[20%] left-1/2 -translate-x-1/2 w-[1200px] h-[1000px] rounded-full bg-gradient-to-tr from-green-800 via-green-600 to-transparent blur-[160px] opacity-40 -z-10" />
+      <div className="absolute top-[20%] left-1/2 -translate-x-1/2 md:w-[1200px] h-[1000px] rounded-full bg-gradient-to-tr from-green-800 via-green-600 to-transparent blur-[160px] opacity-40 -z-10" />
 
       <div className="absolute inset-0 overflow-hidden -z-10">
         <svg className="w-full h-full" preserveAspectRatio="none">
@@ -126,29 +124,29 @@ export default function HeroSection() {
         </div>
 
         <div className="mb-4 inline-block bg-green-900/40 text-white px-4 py-1 rounded-full text-xs">
-          Empowering brands with tech & digital innovation →
+          Empowering brands with tech & digital innovation
         </div>
 
-        <h1 className="text-6xl md:text-6xl font-extrabold text-white mb-8">
+        <h1 className="text-3xl md:text-6xl font-extrabold text-white mb-8">
           Let's Dominate the Digital Era
         </h1>
 
-        <p className="text-lg text-white max-w-2xl mx-auto">
+        <p className="text-[13px] md:text-lg text-white max-w-2xl mx-auto">
           Unleash growth with AI, tech, and digital magic. Lure—where brands lead.
         </p>
-
+        
         <div className="mt-12 flex justify-center gap-6">
-          <button className="bg-green-600 text-white hover:bg-green-500 px-8 py-3 rounded-full font-semibold shadow text-lg">
-            Let's See our Works <span className="sr-only ">→</span>
+          <button className="bg-green-600 text-white hover:bg-green-500 md:px-8 md:py-3 px-4 py-2  rounded-full font-semibold shadow text-[13px] md:text-lg">
+            Get Started
           </button>
-          <button className="bg-black border border-green-700 hover:bg-green-900 px-8 py-3 rounded-full font-semibold shadow text-white text-lg">
+          <button className="bg-black border border-green-700 hover:bg-green-900 md:px-8 md:py-3 px-4 py-2 rounded-full font-semibold shadow text-white text-[13px] md:text-lg">
             Let's Talk
           </button>
         </div>
       </div>
 
       {/* Rotating Circle Text - Top Right Corner */}
-      <div className="fixed md:absolute top-[60vh] right-20 z-30 pointer-events-none select-none">
+      <div className="hidden sm:block fixed md:absolute top-[60vh] right-20 z-30 pointer-events-none select-none">
         <svg
           width="140"
           height="140"
