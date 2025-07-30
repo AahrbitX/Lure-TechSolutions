@@ -45,7 +45,7 @@ export default function Contact() {
             <div className="bg-[#54AF33] rounded-full w-14 h-14 flex items-center justify-center mb-2 shadow-lg">
               <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M21 10.5a8.38 8.38 0 0 1-1.9.73 4.19 4.19 0 0 0-7.1 3.81A11.66 11.66 0 0 1 3 6.13a4.19 4.19 0 0 0 1.3 5.59A4.07 4.07 0 0 1 2.8 11v.05a4.19 4.19 0 0 0 3.36 4.1 4.09 4.09 0 0 1-1.1.15 4.23 4.23 0 0 1-.79-.07 4.19 4.19 0 0 0 3.91 2.91A8.39 8.39 0 0 1 2 19.54a11.72 11.72 0 0 0 6.29 1.84c7.55 0 11.68-6.26 11.68-11.68 0-.18 0-.36-.01-.54A8.18 8.18 0 0 0 23 5.92a8.36 8.36 0 0 1-2.4.66A4.19 4.19 0 0 0 21 10.5z"/></svg>
             </div>
-            <div className="font-medium">www.luretechsolutions.com</div>
+            <div className="font-medium">www.luretechsolutions.in</div>
           </div>
           <div className="flex flex-col items-center min-w-60">
             <div className="bg-[#54AF33] rounded-full w-14 h-14 flex items-center justify-center mb-2 shadow-lg">
@@ -85,7 +85,7 @@ export default function Contact() {
         <div className="flex-1 min-w-80 items-end justify-center flex flex-col gap-2">
           <div className="font-medium">+91 99948 60392</div>
           <div className="font-medium">luretechsolutions@gmail.com</div>
-          <div className="font-medium">www.luretechsolutions.com</div>
+          <div className="font-medium">www.luretechsolutions.in</div>
           <a href="mailto:luretechsolutions@gmail.com" className="bg-[#54AF33] shadow-md rounded-full px-8 py-3 font-semibold text-black mt-8 w-max hover:bg-white transition">Start Your Project</a>
         </div>
       </section>
