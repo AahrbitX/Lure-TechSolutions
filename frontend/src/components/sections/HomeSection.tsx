@@ -127,19 +127,19 @@ export default function HeroSection() {
           Empowering brands with tech & digital innovation
         </div>
 
-        <h1 className="text-3xl md:text-6xl font-extrabold text-white mb-8">
+        <h1 className="text-[36px] md:text-6xl font-extrabold text-white mb-8">
           Let's Dominate the Digital Era
         </h1>
 
-        <p className="text-[13px] md:text-lg text-white max-w-2xl mx-auto">
+        <p className="text-[15px] md:text-lg text-white max-w-2xl mx-auto">
           Unleash growth with AI, tech, and digital magic. Lure—where brands lead.
         </p>
         
         <div className="mt-12 flex justify-center gap-6">
-          <button className="bg-green-600 text-white hover:bg-green-500 md:px-8 md:py-3 px-4 py-2  rounded-full font-semibold shadow text-[13px] md:text-lg">
+          <button className="bg-green-600 text-white hover:bg-green-500 md:px-8 md:py-3 px-4 py-2 rounded-full font-semibold shadow text-[15px] md:text-lg hidden md:inline-block">
             Get Started
           </button>
-          <button className="bg-black border border-green-700 hover:bg-green-900 md:px-8 md:py-3 px-4 py-2 rounded-full font-semibold shadow text-white text-[13px] md:text-lg">
+          <button className="bg-black border border-green-700 hover:bg-green-900 md:px-8 md:py-3 px-4 py-2 rounded-full font-semibold shadow text-white text-[15px] md:text-lg">
             Let's Talk
           </button>
         </div>

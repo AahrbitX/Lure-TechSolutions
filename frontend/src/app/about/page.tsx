@@ -3,22 +3,22 @@ import React from "react";
 export default function About() {
   return (
   <div className="bg-[#000000] min-h-screen text-[#ffffff]  top-[20%] font-poppins py-24">
-      <section className="max-w-7xl mx-auto px-6 pt-32 pb-10 flex flex-col md:flex-row items-center gap-10 relative">
+      <section className="max-w-5xl mx-auto px-6 pt-32 pb-10 flex flex-col md:flex-row items-center gap-10 relative">
         <div className="flex-1">
           <div
         className="text-[36px] md:text-[60px] font-extrabold text-[#181f1b] absolute left-0 top-0 z-0 select-none pointer-events-none"
         style={{ letterSpacing: "-0.05em", lineHeight: 1 }}
           >
-        WORDS FROM THE FOUNDER
+        WORDS FROM OUR FOUNDER
           </div>
-          <h1 className="relative z-10 text-4xl md:text-5xl font-extrabold mb-4 text-[#54AF33]">
+          {/* <h1 className="relative z-10 text-4xl md:text-5xl font-extrabold mb-4 text-[#54AF33]">
         NandhaKrishna, Founder of Lure Tech Solutions
-          </h1>
+          </h1> */}
           <p className="relative z-10 text-lg text-[#bbf7d0] mb-4 font-semibold">
         "At Lure Tech Solutions, our mission is to empower brands and businesses to thrive in the digital era. We believe in the power of innovation, creativity, and collaboration to drive real growth and lasting impact. Every project we take on is a partnership—your vision becomes our mission. Thank you for trusting us to be a part of your journey."
           </p>
         </div>
-        <div className="flex-1 flex justify-end items-center relative z-10">
+        {/* <div className="flex-1 flex justify-end items-center relative z-10">
           <div className=" shadow-xl">
         <img
           src="/assets/images/person.png"
@@ -26,7 +26,7 @@ export default function About() {
           className="object-cover w-full h-full"
         />
           </div>
-        </div>
+        </div> */}
       </section>
 
       {/* Mission & Vision */}
@@ -119,7 +119,7 @@ export default function About() {
                 </p>
               </div>
             </section>
-      <section className="relative max-w-5xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center justify-between gap-10 rounded-3xl overflow-hidden bg-gradient-to-br from-[#181f1b] via-[#232323] to-[#54AF33]/10 shadow-2xl mt-16">
+      <section className="relative max-w-5xl mx-auto px-10 py-20 flex flex-col md:flex-row items-center justify-between gap-10 rounded-3xl overflow-hidden bg-gradient-to-br from-[#181f1b] via-[#232323] to-[#54AF33]/10 shadow-2xl mt-16">
         {/* Glow/Accent Background */}
         <div className="absolute inset-0 pointer-events-none z-0">
           <div className="absolute right-0 top-0 w-2/3 h-full bg-gradient-to-tr from-[#54AF33]/30 via-[#232323]/60 to-transparent blur-2xl opacity-80 rounded-3xl" />

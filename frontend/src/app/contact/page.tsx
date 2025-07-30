@@ -4,13 +4,13 @@ export default function Contact() {
   return (
     <div className="bg-gradient-to- top-[20%] from-[#000000] via-[#54AF33] to-[#24243e] min-h-screen font-poppins text-white py-20">
 
-      <section className="max-w-7xl mx-auto px-6 pt-12 pb-10">
+      <section className="max-w-5xl mx-auto px-6 pt-12 pb-10">
         <div className="flex flex-col md:flex-row items-center gap-10">
           <div className="flex-1">
             <div className="relative">
               <div className="absolute left-0 top-0 text-[90px] md:text-[140px] font-extrabold text-[#54AF33] z-0 select-none pointer-events-none" style={{letterSpacing: "-0.05em", lineHeight: 1, writingMode: "vertical-lr", opacity: 0.2}}>LURE</div>
               <div className="relative z-10 mt-8 md:mt-0">
-                <h1 className="text-4xl md:text-5xl font-extrabold mb-2 text-white">Let’s Grow Your Brand</h1>
+                <h1 className="text-2xl md:text-3xl font-extrabold mb-2 text-white">Let’s Grow Your Brand</h1>
                 <p className="text-[#d4ffd4] mb-6">Connect with Lure Tech Solutions — your partner for digital innovation, branding, and growth.</p>
               </div>
             </div>
@@ -32,22 +32,22 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="max-w-3xl mx-auto px-6 text-center mb-12">
+      <section className="max-w-3xl mx-auto px-6 text-center m-12">
         <h2 className="text-xl md:text-2xl font-semibold mb-6 text-white">Ready to Elevate Your Business?</h2>
-        <div className="flex flex-col md:flex-row justify-center items-center gap-10 mb-6">
-          <div className="flex flex-col items-center">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-10 m-6">
+          <div className="flex flex-col items-center min-w-60">
             <div className="bg-[#54AF33] rounded-full w-14 h-14 flex items-center justify-center mb-2 shadow-lg">
               <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M22 16.92V19a2 2 0 0 1-2.18 2A19.72 19.72 0 0 1 3 5.18 2 2 0 0 1 5 3h2.09a2 2 0 0 1 2 1.72c.13 1.13.37 2.23.72 3.28a2 2 0 0 1-.45 2.11l-1.27 1.27a16 16 0 0 0 6.29 6.29l1.27-1.27a2 2 0 0 1 2.11-.45c1.05.35 2.15.59 3.28.72A2 2 0 0 1 22 16.92z"/></svg>
             </div>
             <div className="font-medium">+91 99948 60392</div>
           </div>
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center min-w-60">
             <div className="bg-[#54AF33] rounded-full w-14 h-14 flex items-center justify-center mb-2 shadow-lg">
               <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M21 10.5a8.38 8.38 0 0 1-1.9.73 4.19 4.19 0 0 0-7.1 3.81A11.66 11.66 0 0 1 3 6.13a4.19 4.19 0 0 0 1.3 5.59A4.07 4.07 0 0 1 2.8 11v.05a4.19 4.19 0 0 0 3.36 4.1 4.09 4.09 0 0 1-1.1.15 4.23 4.23 0 0 1-.79-.07 4.19 4.19 0 0 0 3.91 2.91A8.39 8.39 0 0 1 2 19.54a11.72 11.72 0 0 0 6.29 1.84c7.55 0 11.68-6.26 11.68-11.68 0-.18 0-.36-.01-.54A8.18 8.18 0 0 0 23 5.92a8.36 8.36 0 0 1-2.4.66A4.19 4.19 0 0 0 21 10.5z"/></svg>
             </div>
-            <div className="font-medium">charm.space.blissful</div>
+            <div className="font-medium">www.luretechsolutions.com</div>
           </div>
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center min-w-60">
             <div className="bg-[#54AF33] rounded-full w-14 h-14 flex items-center justify-center mb-2 shadow-lg">
               <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                 <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" fill="none"/>
@@ -60,7 +60,7 @@ export default function Contact() {
         <a href="mailto:luretechsolutions@gmail.com" className="bg-[#54AF33] shadow-md rounded-full px-8 py-3 font-semibold text-black hover:bg-white transition">Contact Us</a>
       </section>
 
-      <section className="max-w-5xl mx-auto px-6 mb-12">
+      <section className="max-w-5xl mx-auto px-6 m-12">
         <div className="rounded-3xl min-h-[10px] overflow-hidden shadow-2xl border-4 border-[#54AF33] bg-black bg-opacity-60">
             <iframe
               title="Lure Tech Solutions Location"
@@ -75,18 +75,18 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="max-w-5xl mx-auto px-6 pb-12 flex flex-col md:flex-row items-center md:items-start gap-10">
+      <section className="max-w-5xl mx-auto mt-20 px-6 pb-12 flex flex-col md:flex-row items-center justify-between">
         <div className="flex-1">
           <h3 className="text-2xl font-semibold mb-4 text-white">Let’s Make Your Brand Unmissable</h3>
           <p className="text-[#d4ffd4]">
             From startups to icons, we help brands shine online and offline. Say YES to growth with Lure Tech Solutions!
           </p>
         </div>
-        <div className="flex-1 flex flex-col gap-2">
+        <div className="flex-1 min-w-80 items-end justify-center flex flex-col gap-2">
           <div className="font-medium">+91 99948 60392</div>
           <div className="font-medium">luretechsolutions@gmail.com</div>
-          <div className="font-medium">charm.space.blissful</div>
-          <a href="mailto:luretechsolutions@gmail.com" className="bg-[#54AF33] shadow-md rounded-full px-8 py-3 font-semibold text-black mt-4 w-max hover:bg-white transition">Start Your Project</a>
+          <div className="font-medium">www.luretechsolutions.com</div>
+          <a href="mailto:luretechsolutions@gmail.com" className="bg-[#54AF33] shadow-md rounded-full px-8 py-3 font-semibold text-black mt-8 w-max hover:bg-white transition">Start Your Project</a>
         </div>
       </section>
   </div>
