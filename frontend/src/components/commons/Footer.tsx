@@ -24,7 +24,7 @@ export default function Footer() {
           <div className="text-xs text-[#bbf7d0] space-y-1">
             <span className="block">Email: <a href="mailto:luretechsolutions@gmail.com" className="hover:text-[#00ff0d] transition">luretechsolutions@gmail.com</a></span>
             <span className="block">Phone: <a href="tel:+919994860392" className="hover:text-[#00ff0d] transition">+91 99948 60392</a></span>
-            <span className="block">Location: <a href="https://what3words.com/charm.space.blissful" target="_blank" rel="noopener noreferrer" className="hover:text-[#00ff0d] transition">charm.space.blissful</a></span>
+            <span className="block">website: <a href="https://luretechsolutions.in" target="_blank" rel="noopener noreferrer" className="hover:text-[#00ff0d] transition">luretechsolutions.in</a></span>
           </div>
         </div>
         {/* Links */}
@@ -34,19 +34,19 @@ export default function Footer() {
             <ul className="space-y-2">
               <li><a href="/" className="hover:text-[#00ff0d] transition">Home</a></li>
               <li><a href="/about" className="hover:text-[#00ff0d] transition">About</a></li>
-              <li><a href="/portfolio" className="hover:text-[#00ff0d] transition">Portfolio</a></li>
+              <li><a href="#" className="hover:text-[#00ff0d] transition">Portfolio</a></li>
               <li><a href="/contact" className="hover:text-[#00ff0d] transition">Contact</a></li>
             </ul>
           </div>
           <div>
             <div className="font-semibold text-[#00ff0d] mb-3 uppercase tracking-wider">Services</div>
             <ul className="space-y-2">
-              <li><a href="/services/digital-marketing" className="hover:text-[#00ff0d] transition">Digital Marketing</a></li>
-              <li><a href="/services/branding" className="hover:text-[#00ff0d] transition">Branding</a></li>
-              <li><a href="/services/media" className="hover:text-[#00ff0d] transition">Media</a></li>
-              <li><a href="/services/websites" className="hover:text-[#00ff0d] transition">Websites</a></li>
-              <li><a href="/services/app-development" className="hover:text-[#00ff0d] transition">App Development</a></li>
-              <li><a href="/services/ai-solutions" className="hover:text-[#00ff0d] transition">AI Solutions</a></li>
+              <li><a href="#" className="hover:text-[#00ff0d] transition">Digital Marketing</a></li>
+              <li><a href="#" className="hover:text-[#00ff0d] transition">Branding</a></li>
+              <li><a href="#" className="hover:text-[#00ff0d] transition">Media</a></li>
+              <li><a href="#" className="hover:text-[#00ff0d] transition">Websites</a></li>
+              <li><a href="#" className="hover:text-[#00ff0d] transition">App Development</a></li>
+              <li><a href="#" className="hover:text-[#00ff0d] transition">AI Solutions</a></li>
             </ul>
           </div>
           <div>
