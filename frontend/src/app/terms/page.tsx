@@ -173,8 +173,8 @@ export default function TermsPage() {
                 </h2>
                 <p className="text-[#4A5568] text-sm leading-relaxed">
                   For questions about these Terms and Conditions, contact us at{" "}
-                  <a href="mailto:legal@enticeinnovations.com" className="text-[#0F67FF] hover:underline">
-                    legal@enticeinnovations.com
+                  <a href="mailto:info@enticeinnovations.com" className="text-[#0F67FF] hover:underline">
+                    info@enticeinnovations.com
                   </a>
                   {" "}or write to Entice Innovations, India.
                 </p>

@@ -13,6 +13,7 @@ const pages = [
   { name: "About",     href: "/about" },
   { name: "Services",  href: "/services" },
   { name: "Portfolio", href: "/portfolio" },
+  { name: "Blog",      href: "/blog" },
   { name: "Contact",   href: "/contact" },
 ];
 
@@ -62,14 +63,14 @@ export default function Footer() {
 
             {/* Contact */}
             <div className="flex flex-col gap-2.5 text-sm text-[#6B7A8D]">
-              <a href="mailto:hello@enticeinnovations.com"
+              <a href="mailto:info@enticeinnovations.com"
                 className="flex items-center gap-2.5 hover:text-[#0F67FF] transition-colors duration-200 group">
                 <span className="w-4 h-4 flex-shrink-0 text-[#C0CDD8] group-hover:text-[#0F67FF] transition-colors">
                   <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </span>
-                hello@enticeinnovations.com
+                info@enticeinnovations.com
               </a>
               <a href="tel:+910000000000"
                 className="flex items-center gap-2.5 hover:text-[#0F67FF] transition-colors duration-200 group">

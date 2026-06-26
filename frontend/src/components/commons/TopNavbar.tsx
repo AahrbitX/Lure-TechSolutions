@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -9,6 +9,7 @@ const navLinks = [
   { name: "About", href: "/about" },
   { name: "Services", href: "/services" },
   { name: "Portfolio", href: "/portfolio" },
+  { name: "Blog", href: "/blog" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -54,7 +55,7 @@ export default function TopNavbar() {
                     href={link.href}
                     className={`px-4 py-1.5 rounded-full text-sm transition-all duration-150 whitespace-nowrap ${
                       isActive
-                        ? "bg-[#F4F4F4] text-[#1A1A1A] font-medium shadow-[0_1px_2px_rgba(0,0,0,0.07)]"
+                        ? "text-[#1A1A1A] font-medium]"
                         : "text-[#555] hover:text-[#1A1A1A]"
                     }`}
                   >

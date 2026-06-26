@@ -1,6 +1,3 @@
-"use client";
-
-import React from "react";
 import HeroSection from "@/components/sections/HomeSection";
 import About from "@/components/sections/About";
 import Features from "@/components/sections/Features";
@@ -8,14 +5,16 @@ import Testimonial from "@/components/sections/Testimonial";
 import NewsLetters from "@/components/sections/NewsLetters";
 import Achievements from "@/components/sections/achivements";
 import FAQSection from "@/components/sections/questions";
+import BlogPreview from "@/components/sections/BlogPreview";
+import { getAllPosts } from "@/lib/blog";
 
-
-
-export default function Home() {
+export default async function Home() {
+  const posts = await getAllPosts();
+  const previewPosts = posts.slice(0, 3);
 
   return (
     <main className="min-h-screen bg-white text-[#0A0F1E]">
-      {/* Shared gradient background — hero + about + services flow as one continuous surface */}
+      {/* Shared gradient background */}
       <div style={{
         background: `
           radial-gradient(ellipse 72% 45% at 18% 12%, rgba(147,197,253,0.50) 0%, rgba(186,230,253,0.22) 45%, transparent 70%),
@@ -33,6 +32,7 @@ export default function Home() {
       <Achievements />
       <FAQSection />
       <Testimonial />
+      <BlogPreview posts={previewPosts} />
       <NewsLetters />
     </main>
   );

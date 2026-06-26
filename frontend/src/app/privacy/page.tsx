@@ -172,8 +172,8 @@ export default function PrivacyPage() {
                 </ul>
                 <p className="text-[#4A5568] text-sm leading-relaxed">
                   To exercise any of these rights, contact us at{" "}
-                  <a href="mailto:privacy@enticeinnovations.com" className="text-[#0F67FF] hover:underline">
-                    privacy@enticeinnovations.com
+                  <a href="mailto:info@enticeinnovations.com" className="text-[#0F67FF] hover:underline">
+                    info@enticeinnovations.com
                   </a>.
                 </p>
               </section>
@@ -205,8 +205,8 @@ export default function PrivacyPage() {
                 </h2>
                 <p className="text-[#4A5568] text-sm leading-relaxed">
                   For privacy-related questions or requests, contact our team at{" "}
-                  <a href="mailto:privacy@enticeinnovations.com" className="text-[#0F67FF] hover:underline">
-                    privacy@enticeinnovations.com
+                  <a href="mailto:info@enticeinnovations.com" className="text-[#0F67FF] hover:underline">
+                    info@enticeinnovations.com
                   </a>
                   . We aim to respond to all data-related requests within 5 business days.
                 </p>

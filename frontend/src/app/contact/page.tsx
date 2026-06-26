@@ -25,8 +25,8 @@ const contactDetails = [
   },
   {
     label: "Email",
-    value: "hello@enticeinnovations.com",
-    href: "mailto:hello@enticeinnovations.com",
+    value: "info@enticeinnovations.com",
+    href: "mailto:info@enticeinnovations.com",
     icon: (
       <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -67,7 +67,7 @@ export default function Contact() {
   const [submitting, setSubmitting] = useState(false);
   const [error, setError]     = useState("");
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!name.trim() || !email.trim() || !message.trim()) {
       setError("Please fill in your name, email, and message.");
@@ -75,10 +75,23 @@ export default function Contact() {
     }
     setError("");
     setSubmitting(true);
-    setTimeout(() => {
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, company, service, message }),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        setError(data.error ?? "Something went wrong. Please try again.");
+      } else {
+        setSubmitted(true);
+      }
+    } catch {
+      setError("Network error. Please check your connection and try again.");
+    } finally {
       setSubmitting(false);
-      setSubmitted(true);
-    }, 1400);
+    }
   }
 
   function handleReset() {
