@@ -1,152 +1,331 @@
-import React from "react";
+"use client";
+
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import Image from "next/image";
+
+const fadeUp = (delay = 0) => ({
+  initial: { opacity: 0, y: 30 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+  transition: { duration: 0.6, ease: "easeOut", delay },
+});
+
+const timelineItems = [
+  { year: "2022", text: "Founded with a vision to serve premium clients" },
+  { year: "2023", text: "Secured our first 10 enterprise clients" },
+  { year: "2024", text: "Expanded into AI consulting and tech infrastructure" },
+  { year: "2025", text: "50+ premium clients, 150K+ leads delivered" },
+];
+
+const values = [
+  {
+    bg: "bg-[#0A0F1E]",
+    iconBg: "bg-[#0F67FF]/20",
+    titleColor: "text-white",
+    bodyColor: "text-[#BFDBFE]/80",
+    icon: (
+      <svg className="w-6 h-6 text-[#0F67FF]" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z" />
+      </svg>
+    ),
+    title: "Premium Focus",
+    body: "We partner exclusively with clients who demand excellence. Premium positioning isn't just a promise — it's how we operate every day.",
+  },
+  {
+    bg: "bg-white border border-[#0F67FF]/15 shadow-sm",
+    iconBg: "bg-[#EEF4FF]",
+    titleColor: "text-[#0A0F1E]",
+    bodyColor: "text-[#6B7280]",
+    icon: (
+      <svg className="w-6 h-6 text-[#0F67FF]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+      </svg>
+    ),
+    title: "End-to-End Ownership",
+    body: "From strategy to execution to optimization — you work with one team. No briefings to external agencies, no lost context.",
+  },
+  {
+    bg: "bg-[#0F67FF]",
+    iconBg: "bg-white/20",
+    titleColor: "text-white",
+    bodyColor: "text-white/90",
+    icon: (
+      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
+      </svg>
+    ),
+    title: "Results First",
+    body: "Every decision is tied to measurable outcomes. We define KPIs before we start and report against them every month.",
+  },
+];
+
+function TimelineSection() {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true });
+
+  return (
+    <section className="bg-gradient-to-br from-white via-[#F0F4FF] to-[#EEF4FF] py-20 px-6">
+      <div className="max-w-3xl mx-auto">
+        <motion.h2
+          {...fadeUp(0)}
+          className="text-3xl font-extrabold text-[#0A0F1E] text-center mb-16"
+        >
+          Our Journey
+        </motion.h2>
+
+        <div className="relative">
+          {/* Vertical line */}
+          <div className="absolute left-6 top-0 bottom-0 w-0.5 overflow-hidden rounded-full">
+            <motion.div
+              ref={ref}
+              className="w-full bg-gradient-to-b from-[#0F67FF] to-[#3B82F6]"
+              initial={{ scaleY: 0 }}
+              animate={inView ? { scaleY: 1 } : { scaleY: 0 }}
+              transition={{ duration: 1.2, ease: "easeOut" }}
+              style={{ transformOrigin: "top", height: "100%" }}
+            />
+          </div>
+
+          <div className="space-y-10 pl-16">
+            {timelineItems.map((item, i) => (
+              <motion.div
+                key={item.year}
+                {...fadeUp(i * 0.15)}
+                className="relative flex items-start gap-4"
+              >
+                {/* Dot */}
+                <div className="absolute -left-[2.85rem] top-0.5 w-3 h-3 rounded-full bg-[#0F67FF] border-2 border-white shadow-md" />
+                <span className="bg-[#0F67FF] text-white px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap">
+                  {item.year}
+                </span>
+                <p className="text-[#374151] text-sm leading-relaxed pt-0.5">{item.text}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 export default function About() {
   return (
-  <div className="bg-[#000000] min-h-screen text-[#ffffff]  top-[20%] font-poppins py-24">
-      <section className="max-w-5xl mx-auto px-6 pt-32 pb-10 flex flex-col md:flex-row items-center gap-10 relative">
-        <div className="flex-1">
-          <div
-        className="text-[36px] md:text-[60px] font-extrabold text-[#181f1b] absolute left-0 top-0 z-0 select-none pointer-events-none"
-        style={{ letterSpacing: "-0.05em", lineHeight: 1 }}
-          >
-        WORDS FROM OUR FOUNDER
-          </div>
-          {/* <h1 className="relative z-10 text-4xl md:text-5xl font-extrabold mb-4 text-[#54AF33]">
-        NandhaKrishna, Founder of Lure Tech Solutions
-          </h1> */}
-          <p className="relative z-10 text-lg text-[#bbf7d0] mb-4 font-semibold">
-        "At Lure Tech Solutions, our mission is to empower brands and businesses to thrive in the digital era. We believe in the power of innovation, creativity, and collaboration to drive real growth and lasting impact. Every project we take on is a partnership—your vision becomes our mission. Thank you for trusting us to be a part of your journey."
-          </p>
-        </div>
-        {/* <div className="flex-1 flex justify-end items-center relative z-10">
-          <div className=" shadow-xl">
-        <img
-          src="/assets/images/person.png"
-          alt="NandhaKrishna, Founder"
-          className="object-cover w-full h-full"
-        />
-          </div>
-        </div> */}
-      </section>
+    <div className="bg-white text-[#0A0F1E]">
 
-      {/* Mission & Vision */}
-      <section className="max-w-5xl mx-auto px-6 py-12 grid md:grid-cols-2 gap-10 items-center">
-        <div className="space-y-6">
-          <div className="rounded-2xl overflow-hidden shadow-lg">
-            <img
-              src="/assets/images/office.png"
-              alt="Office"
-              className="object-cover w-full h-48"
-            />
-          </div>
-        </div>
-        <div>
-          <h2 className="text-2xl md:text-3xl font-bold mb-4 text-[#54AF33]">
-            Our Mission
-          </h2>
-          <p className="text-[#bbf7d0] mb-6">
-            To empower businesses and brands to thrive in the digital era by delivering innovative, data-driven, and creative solutions that drive real growth and lasting impact.
-          </p>
-        </div>
+      {/* ── Section 1: Hero / Founder Quote ── */}
+      <section className="relative bg-gradient-to-br from-[#FAF9F7] via-white to-[#EEF4FF] overflow-hidden">
+        {/* Watermark */}
+        <span className="absolute inset-0 flex items-center justify-center text-[8vw] font-black text-[#0F67FF]/5 select-none pointer-events-none whitespace-nowrap z-0">
+          ENTICE INNOVATIONS
+        </span>
 
-
-
-        <div>
-          <h2 className="text-2xl md:text-3xl font-bold mb-4 text-[#54AF33]">
-            Our Vision
-          </h2>
-          <p className="text-[#bbf7d0]">
-            To be the most trusted partner for digital transformation, recognized for our creativity, integrity, and results across India and beyond.
-          </p>
-        </div>
-        <div className="space-y-6">
-          <div className="rounded-2xl overflow-hidden shadow-lg">
-            <img
-              src="/assets/images/workspace.png"
-              alt="Office"
-              className="object-cover w-full h-48"
-            />
-          </div>
+        <div className="relative z-10 py-32 px-6 max-w-4xl mx-auto">
+          <motion.div {...fadeUp(0)}>
+            <p className="text-[#0F67FF] text-xs tracking-widest uppercase font-semibold mb-6">
+              ✦ About Us
+            </p>
+            <blockquote className="text-[#374151] text-lg leading-relaxed italic mb-6">
+              "At Entice Innovations, our mission is to be the premium digital partner that ambitious businesses trust when they need end-to-end solutions. We don't just deliver services — we build digital ecosystems that transform how you compete, grow, and lead."
+            </blockquote>
+            <p className="text-[#6B7280] text-sm font-medium">
+              — Leadership Team, Entice Innovations
+            </p>
+          </motion.div>
         </div>
       </section>
 
-            {/* Founding Story */}
-          <section className="max-w-5xl mx-auto px-6 py-16 flex flex-col md:flex-row items-center gap-10">
-            {/* Left: Visual/Statue or Thematic Image */}
-            <div className="flex-1 flex justify-center items-center relative">
-              <div className="w-full md:w-[340px] h-[340px] bg-[#181f1b] rounded-3xl flex items-center justify-center shadow-2xl overflow-hidden">
-                <img
-                  src="/assets/images/inovation.png"
-                  alt="Founding Story"
-                  className="object-cover w-full h-full opacity-90"
+      {/* ── Section 2: Mission & Vision ── */}
+      <section className="bg-white py-20 px-6">
+        <div className="max-w-5xl mx-auto space-y-16">
+
+          {/* Mission row */}
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            {/* Image left */}
+            <motion.div {...fadeUp(0)}>
+              <div className="rounded-3xl border-4 border-[#0F67FF]/20 shadow-xl overflow-hidden">
+                <Image
+                  src="/assets/images/office.png"
+                  alt="Our Office"
+                  width={600}
+                  height={400}
+                  className="object-cover w-full h-64"
+                  onError={(e) => {
+                    (e.currentTarget as HTMLImageElement).style.display = "none";
+                  }}
                 />
-                <span className="absolute top-8 left-8 text-5xl font-extrabold text-[#54AF33] opacity-20 select-none pointer-events-none" style={{letterSpacing: "-0.05em"}}>STORY</span>
+                <div className="bg-gradient-to-br from-[#0F67FF]/20 to-[#EEF4FF] h-48 rounded-3xl hidden" />
               </div>
-            </div>
-            {/* Right: Text */}
-            <div className="flex-1 flex flex-col justify-center">
-              <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-[#54AF33] leading-tight">
-                Founding<br />Story
+            </motion.div>
+
+            {/* Text right */}
+            <motion.div {...fadeUp(0.15)}>
+              <h2 className="text-2xl md:text-3xl font-extrabold text-[#0F67FF] mb-4">
+                Our Mission
               </h2>
-              <p className="text-[#bbf7d0] text-lg md:text-xl font-medium mb-4">
-                Lure Tech Solutions was born from a passion for creativity and a vision to bridge the gap between technology and business growth. Founded by a team of digital enthusiasts, we set out to empower brands of all sizes with innovative solutions that drive real results.
+              <p className="text-[#374151] leading-relaxed">
+                To empower businesses and brands to thrive in the digital era by delivering innovative, AI-driven, and end-to-end solutions that create measurable growth and lasting competitive advantage.
               </p>
-              <p className="text-[#bbf7d0] text-base">
-                Our journey began with a simple belief: every business deserves a powerful digital presence and a partner who truly cares about their success.
+            </motion.div>
+          </div>
+
+          {/* Vision row (reversed) */}
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            {/* Text left */}
+            <motion.div {...fadeUp(0)} className="order-2 md:order-1">
+              <h2 className="text-2xl md:text-3xl font-extrabold text-[#0F67FF] mb-4">
+                Our Vision
+              </h2>
+              <p className="text-[#374151] leading-relaxed">
+                To be India's most trusted premium digital partner — recognized for transforming ambitious businesses through technology, strategy, and creative excellence.
               </p>
-            </div>
-          </section>
-            
-            <section className="max-w-5xl mx-auto px-6 py-16 flex flex-col md:flex-row-reverse items-center gap-10">
-              {/* Left: Visual/Photo */}
-              <div className="flex-1 flex justify-center items-center relative">
-                <div className="w-full md:w-[340px] h-[340px] bg-[#181f1b] rounded-3xl flex items-center justify-center shadow-2xl overflow-hidden">
-                  <img
-                    src="/assets/images/promize.png"
-                    alt="Our Promise"
-                    className="object-cover w-full h-full opacity-90"
-                  />
-                  <span className="absolute top-8 left-8 text-5xl font-extrabold text-[#54AF33] opacity-20 select-none pointer-events-none" style={{letterSpacing: "-0.05em"}}>PROMISE</span>
-                </div>
+            </motion.div>
+
+            {/* Image right */}
+            <motion.div {...fadeUp(0.15)} className="order-1 md:order-2">
+              <div className="rounded-3xl border-4 border-[#0F67FF]/20 shadow-xl overflow-hidden">
+                <Image
+                  src="/assets/images/workspace.png"
+                  alt="Our Workspace"
+                  width={600}
+                  height={400}
+                  className="object-cover w-full h-64"
+                  onError={(e) => {
+                    (e.currentTarget as HTMLImageElement).style.display = "none";
+                  }}
+                />
+                <div className="bg-gradient-to-br from-[#0F67FF]/20 to-[#EEF4FF] h-48 rounded-3xl hidden" />
               </div>
-              {/* Right: Text */}
-              <div className="flex-1 flex flex-col justify-center">
-                <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-[#54AF33] leading-tight">
-                  Our Promise
-                </h2>
-                <p className="text-[#bbf7d0] text-xl md:text-2xl font-semibold italic">
-                  “We promise to deliver creative solutions, transparent communication, and real results—empowering your brand to stand out and succeed.”
-                </p>
-              </div>
-            </section>
-      <section className="relative max-w-5xl mx-auto px-10 py-20 flex flex-col md:flex-row items-center justify-between gap-10 rounded-3xl overflow-hidden bg-gradient-to-br from-[#181f1b] via-[#232323] to-[#54AF33]/10 shadow-2xl mt-16">
-        {/* Glow/Accent Background */}
-        <div className="absolute inset-0 pointer-events-none z-0">
-          <div className="absolute right-0 top-0 w-2/3 h-full bg-gradient-to-tr from-[#54AF33]/30 via-[#232323]/60 to-transparent blur-2xl opacity-80 rounded-3xl" />
-          <div className="absolute left-0 bottom-0 w-1/3 h-1/2 bg-[#54AF33]/20 blur-2xl opacity-60 rounded-3xl" />
-        </div>
-        {/* Left: Tagline & Text */}
-        <div className="flex-1 z-10 text-left">
-          {/* <span className="inline-block mb-4 px-6 py-2 rounded-full bg-[#181f1b] border border-[#54AF33] text-[#54AF33] font-bold text-lg shadow-md tracking-wide">
-            
-          </span> */}
-          <h2 className="text-3xl md:text-4xl font-extrabold mb-2 text-white leading-tight drop-shadow">
-            You're Just One <span className="text-[#54AF33]">"Yes"</span> Away from Success.
-          </h2>
-          <p className="text-[#bbf7d0] text-lg mb-6 font-medium">
-            Take the leap—your next big win starts here.
-          </p>
-        </div>
-        {/* Right: CTA Button */}
-        <div className="flex-1 flex justify-center md:justify-end z-10">
-          <a
-            href="/contact"
-            className="px-10 py-4 rounded-full bg-[#54AF33] text-[#000] font-bold text-lg shadow-xl hover:bg-[#43a025] transition duration-300 ease-in-out border-2 border-[#54AF33] hover:scale-105"
-          >
-            Get in Touch
-          </a>
+            </motion.div>
+          </div>
+
         </div>
       </section>
+
+      {/* ── Section 3: Founding Story (dark) ── */}
+      <section className="bg-[#0A0F1E] py-20 px-6">
+        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
+
+          {/* Image left */}
+          <motion.div {...fadeUp(0)} className="flex-shrink-0">
+            <div className="relative bg-[#0D1A3E] rounded-3xl shadow-2xl overflow-hidden w-full md:w-[340px] h-[340px]">
+              <Image
+                src="/assets/images/inovation.png"
+                alt="Founding Story"
+                fill
+                className="object-cover opacity-90"
+              />
+              <span className="absolute top-6 left-6 text-6xl font-black text-[#0F67FF]/20 select-none pointer-events-none">
+                STORY
+              </span>
+            </div>
+          </motion.div>
+
+          {/* Text right */}
+          <motion.div {...fadeUp(0.2)} className="flex-1">
+            <h2 className="text-4xl font-extrabold text-[#0F67FF] mb-6">
+              Founding Story
+            </h2>
+            <p className="text-[#BFDBFE] text-lg leading-relaxed mb-4">
+              Entice Innovations was born from a simple belief: that every ambitious business deserves a digital partner who thinks strategically, acts decisively, and cares genuinely about outcomes. Founded by a team of technology and marketing veterans, we set out to bridge the gap between premium digital strategy and flawless execution.
+            </p>
+            <p className="text-[#BFDBFE] text-lg leading-relaxed">
+              Today, we serve 50+ premium clients across industries — from fintech and healthcare to real estate and professional services — delivering end-to-end solutions that span AI consulting, brand building, and technology infrastructure.
+            </p>
+          </motion.div>
+
+        </div>
+      </section>
+
+      {/* ── Section 4: Team Values ── */}
+      <section className="bg-gradient-to-br from-white via-[#F0F4FF] to-[#EEF4FF] py-20 px-6">
+        <div className="max-w-5xl mx-auto">
+          <motion.h2
+            {...fadeUp(0)}
+            className="text-3xl font-extrabold text-[#0A0F1E] text-center mb-12"
+          >
+            What We Stand For
+          </motion.h2>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {values.map((v, i) => (
+              <motion.div
+                key={v.title}
+                {...fadeUp(i * 0.1)}
+                className={`${v.bg} rounded-2xl p-8`}
+              >
+                <div className={`${v.iconBg} w-12 h-12 rounded-xl flex items-center justify-center mb-5`}>
+                  {v.icon}
+                </div>
+                <h3 className={`text-lg font-bold mb-3 ${v.titleColor}`}>{v.title}</h3>
+                <p className={`text-sm leading-relaxed ${v.bodyColor}`}>{v.body}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Section 5: Our Promise (dark) ── */}
+      <section className="bg-[#0A0F1E] py-20 px-6">
+        <div className="max-w-5xl mx-auto flex flex-col md:flex-row-reverse items-center gap-12">
+
+          {/* Image right */}
+          <motion.div {...fadeUp(0)} className="flex-shrink-0">
+            <div className="relative bg-[#0D1A3E] rounded-3xl shadow-2xl overflow-hidden w-full md:w-[340px] h-[340px]">
+              <Image
+                src="/assets/images/promize.png"
+                alt="Our Promise"
+                fill
+                className="object-cover opacity-90"
+              />
+              <span className="absolute top-6 left-6 text-6xl font-black text-[#0F67FF]/20 select-none pointer-events-none">
+                PROMISE
+              </span>
+            </div>
+          </motion.div>
+
+          {/* Text left */}
+          <motion.div {...fadeUp(0.2)} className="flex-1">
+            <h2 className="text-4xl font-extrabold text-[#0F67FF] mb-6">
+              Our Promise
+            </h2>
+            <p className="text-[#BFDBFE] text-xl leading-relaxed italic">
+              "We promise to deliver creative solutions, transparent communication, and real results — empowering your business to stand out, scale up, and succeed beyond expectations."
+            </p>
+          </motion.div>
+
+        </div>
+      </section>
+
+      {/* ── Section 6: Timeline ── */}
+      <TimelineSection />
+
+      {/* ── Section 7: CTA Banner ── */}
+      <section className="relative bg-gradient-to-br from-[#0A0F1E] via-[#0D1A3E] to-[#0A0F1E] overflow-hidden py-24 px-6">
+        {/* Glow blobs */}
+        <div className="absolute top-0 left-1/4 w-72 h-72 bg-[#0F67FF]/20 blur-3xl rounded-full pointer-events-none" />
+        <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-[#0F67FF]/20 blur-3xl rounded-full pointer-events-none" />
+
+        <div className="relative z-10 max-w-3xl mx-auto text-center">
+          <motion.div {...fadeUp(0)}>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4 leading-tight">
+              You're Just One{" "}
+              <span className="text-[#0F67FF]">'Yes'</span>{" "}
+              Away From Extraordinary.
+            </h2>
+            <p className="text-[#BFDBFE] text-lg mb-10">
+              Take the leap — your next chapter starts here.
+            </p>
+            <a
+              href="/contact"
+              className="inline-block bg-[#0F67FF] text-white px-10 py-4 rounded-xl font-bold hover:bg-[#0D5AE0] transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-[#0F67FF]/30"
+            >
+              Get in Touch
+            </a>
+          </motion.div>
+        </div>
+      </section>
+
     </div>
   );
 }

@@ -1,38 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
 
 :root {
-  --green: #54af33;
+  --blue: #0F67FF;
+  --blue-light: #BFDBFE;
+  --navy: #0A0F1E;
+  --cream: #FAF9F7;
+  --ice: #EEF4FF;
   --white: #ffffff;
   --black: #000000;
+  --radius: 0.75rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --green: #54af33;
-    --white: #ffffff;
-    --black: #000000;
-  }
+html {
+  scroll-behavior: smooth;
+  background-color: #f5f8fc;
+  overscroll-behavior: none;
+}
+
+::selection {
+  background: #0F67FF;
+  color: white;
 }
 
 body {
-  padding: 0%;
-  margin: 0%;
+  padding: 0;
+  margin: 0;
   font-family: "Poppins", sans-serif;
-  background-color:black;
+  background-color: #f5f8fc;
   overflow-x: hidden;
+  color: #0A0F1E;
 }
 
+/* Noise overlay removed — position:fixed at z:9999 forces GPU recomposition every scroll frame */
+
+/* Animated gradient shimmer text */
+.shimmer-text {
+  background: linear-gradient(90deg, #0F67FF 0%, #60A5FA 40%, #0F67FF 80%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+}
+
+/* Animated gradient hero background */
+.hero-gradient-bg {
+  background: linear-gradient(-45deg, #0A0F1E, #0D1A3E, #0F2055, #071030);
+  background-size: 400% 400%;
+  animation: gradientShift 8s ease infinite;
+}
+
+/* Gradient border card */
+.gradient-border-card {
+  position: relative;
+  border-radius: 16px;
+  padding: 1px;
+  background: linear-gradient(135deg, #0F67FF33, #3B82F633, #0F67FF33);
+}
+
+/* Glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.glass-dark {
+  background: rgba(15, 103, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Smooth scroll for anchor links */
 @layer components {
   .sections {
-    margin: 2.5%;
-    margin-top: 0;
-    margin-bottom: 0;
-    height: 500px;
     width: 100%;
-    /* background-color: #000000; */
   }
 
   .logo-container {
@@ -43,9 +90,48 @@ body {
   }
 
   .logo {
-    width: 100px; /* Adjust the size as needed */
+    width: 100px;
     height: auto;
-    max-height: 100px; /* Adjust the size as needed */
+    max-height: 100px;
     object-fit: contain;
   }
+
+  /* Section reveal animation base */
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* GPU acceleration for scroll-animated elements */
+[data-framer-motion],
+.motion-safe\:transform-gpu {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Prevent layout shift during scroll */
+html {
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF9F7;
+}
+::-webkit-scrollbar-thumb {
+  background: #0F67FF;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0D5AE0;
 }

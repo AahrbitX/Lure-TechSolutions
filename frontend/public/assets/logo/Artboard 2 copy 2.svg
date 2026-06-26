@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        font-family: ArialMT, Arial;
+        font-size: 45.62px;
+        letter-spacing: .3em;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        isolation: isolate;
+      }
+
+      .cls-3 {
+        font-family: Run-Medium, Run;
+        font-size: 266.4px;
+        font-weight: 500;
+      }
+
+      .cls-4 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <rect y="0" width="1080" height="1080"/>
+  <rect class="cls-1" x="630.57" y="435.72" width="32.6" height="30.16"/>
+  <g class="cls-4">
+    <text class="cls-3" transform="translate(257.34 616.15)"><tspan x="0" y="0">entice</tspan></text>
+  </g>
+  <g class="cls-4">
+    <text class="cls-2" transform="translate(300.42 676.99)"><tspan x="0" y="0">i n n o v a t i o n s</tspan></text>
+  </g>
+  <path class="cls-1" d="m246.01,651.47c-39.54-22.83-79.08-45.66-118.62-68.5l118.62-68.49c-4.89,4.89-27.68,28.7-28.46,66.48-.84,40.35,24.07,66.1,28.46,70.5Z"/>
+  <path class="cls-1" d="m139.57,506.23c.84-40.35-24.08-66.11-28.47-70.5,39.55,22.83,79.09,45.66,118.63,68.5l-118.63,68.49c4.89-4.89,27.68-28.7,28.47-66.48Z"/>
+</svg>

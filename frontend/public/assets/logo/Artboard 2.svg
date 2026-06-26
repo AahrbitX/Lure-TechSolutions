@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2 {
+        isolation: isolate;
+      }
+
+      .cls-2 {
+        fill: #0f67ff;
+        font-family: Run-Medium, Run;
+        font-size: 323.25px;
+        font-weight: 500;
+      }
+    </style>
+  </defs>
+  <g class="cls-1">
+    <text class="cls-2" transform="translate(116.37 663.08)"><tspan x="0" y="0">entice</tspan></text>
+  </g>
+</svg>
