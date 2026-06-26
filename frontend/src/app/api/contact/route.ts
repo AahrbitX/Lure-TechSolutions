@@ -157,10 +157,16 @@ function userEmailHtml(name: string) {
                 "We schedule a call to understand your requirements in detail",
                 "We share a tailored proposal within 2–3 business days",
               ].map((step, i) => `
-              <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:${i < 3 ? "10px" : "0"};">
-                <div style="width:20px;height:20px;border-radius:50%;background:#0F67FF;color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;line-height:20px;text-align:center;">${i + 1}</div>
-                <p style="margin:0;font-size:13px;color:#374151;line-height:1.6;padding-top:1px;">${step}</p>
-              </div>`).join("")}
+              <table cellpadding="0" cellspacing="0" style="margin-bottom:${i < 3 ? "10px" : "0"};width:100%;">
+                <tr>
+                  <td style="width:28px;vertical-align:top;padding-top:1px;">
+                    <table cellpadding="0" cellspacing="0"><tr><td style="width:22px;height:22px;border-radius:50%;background:#0F67FF;color:#ffffff;font-size:11px;font-weight:700;text-align:center;line-height:22px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;">${i + 1}</td></tr></table>
+                  </td>
+                  <td style="padding-left:10px;vertical-align:top;">
+                    <p style="margin:0;font-size:13px;color:#374151;line-height:1.6;padding-top:3px;">${step}</p>
+                  </td>
+                </tr>
+              </table>`).join("")}
             </div>
 
             <!-- Contact line -->
