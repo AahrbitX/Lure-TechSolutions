@@ -7,11 +7,11 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://enticeinnovations.com"),
   title: {
-    default: "Entice Innovations — Premium Digital Partner",
+    default: "Entice Innovations — Digital Solutions Partner",
     template: "%s | Entice Innovations",
   },
   description:
-    "Entice Innovations: End-to-end digital solutions — AI consulting, IT strategy, digital marketing, brand building, and tech infrastructure for premium clients across 12+ industries.",
+    "Entice Innovations: End-to-end digital solutions — AI consulting, IT strategy, digital marketing, brand building, and tech infrastructure across 12+ industries.",
   keywords: [
     "Entice Innovations",
     "AI consulting",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     "domain hosting",
     "SEO",
     "performance marketing",
-    "premium digital agency",
+    "digital agency India",
     "India",
   ],
   authors: [{ name: "Entice Innovations", url: "https://enticeinnovations.com" }],
@@ -44,9 +44,9 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: "https://enticeinnovations.com",
     siteName: "Entice Innovations",
-    title: "Entice Innovations — Premium Digital Partner",
+    title: "Entice Innovations — Digital Solutions Partner",
     description:
-      "End-to-end digital solutions — AI consulting, IT strategy, digital marketing, brand building, and tech infrastructure for premium clients.",
+      "End-to-end digital solutions — AI consulting, IT strategy, digital marketing, brand building, and tech infrastructure across 12+ industries.",
     images: [
       {
         url: "/assets/logo/entice-logo.svg",
@@ -58,9 +58,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Entice Innovations — Premium Digital Partner",
+    title: "Entice Innovations — Digital Solutions Partner",
     description:
-      "End-to-end digital solutions — AI consulting, IT strategy, digital marketing, brand building, and tech infrastructure for premium clients.",
+      "End-to-end digital solutions — AI consulting, IT strategy, digital marketing, brand building, and tech infrastructure across 12+ industries.",
     images: ["/assets/logo/entice-logo.svg"],
     creator: "@enticeinnovations",
     site: "@enticeinnovations",

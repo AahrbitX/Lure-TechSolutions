@@ -3,11 +3,11 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about Entice Innovations — a premium end-to-end digital partner serving ambitious businesses across AI consulting, IT strategy, digital marketing, brand building, and tech infrastructure.",
+    "Learn about Entice Innovations — an end-to-end digital partner for ambitious businesses across AI consulting, IT strategy, digital marketing, brand building, and tech infrastructure.",
   openGraph: {
-    title: "About Entice Innovations — Premium Digital Partner",
+    title: "About Entice Innovations — Digital Solutions Partner",
     description:
-      "We are an integrated team — strategy, technology, creative, and growth working in parallel. 50+ premium clients. 12+ industries. Built for businesses that refuse to be average.",
+      "We are an integrated team — strategy, technology, creative, and growth working in parallel. 50+ clients. 12+ industries. Built for businesses that refuse to be average.",
     url: "https://enticeinnovations.com/about",
   },
   alternates: {

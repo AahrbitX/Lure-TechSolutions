@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Portfolio — Entice Innovations",
     description:
-      "50+ premium clients served. Explore our work across AI consulting, brand building, digital marketing, IT infrastructure, and tech delivery.",
+      "50+ clients served. Explore our work across AI consulting, brand building, digital marketing, IT infrastructure, and tech delivery.",
     url: "https://enticeinnovations.com/portfolio",
   },
   alternates: {
