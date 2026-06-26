@@ -1,0 +1,53 @@
+# Entice Innovations — LLM Reference
+
+> Entice Innovations is a premium end-to-end digital partner for ambitious businesses.
+> We deliver AI consulting, IT strategy, digital marketing, brand building, tech infrastructure, and performance marketing.
+
+## About
+
+Entice Innovations is a full-service digital agency based in India, serving premium clients across 12+ industries including Healthcare, Defence, Finance, Automotive, Education, Manufacturing, and SaaS.
+
+We are not a typical agency. We operate as an integrated team — strategy, technology, creative, and growth working in parallel — not handed off between vendors.
+
+## Core Services
+
+- Digital Marketing — SEO, SEM, PPC, social media, content marketing, email automation
+- IT Consulting — Technology audits, digital transformation roadmaps, system integration
+- AI Consulting — AI readiness assessment, ML strategy, workflow automation, custom LLM solutions
+- Domain & Hosting — Managed hosting, SSL, CDN, uptime monitoring
+- Tech Infrastructure — Cloud architecture (AWS/GCP/Azure), DevOps, CI/CD, security hardening
+- Brand Building — Brand strategy, visual identity, logo, brand guidelines, tone of voice
+- Marketing — Performance campaigns, multi-channel strategy, analytics, A/B testing
+
+## Key Facts
+
+- 50+ premium clients served
+- 150K+ leads generated
+- 100K+ impressions delivered
+- 7 core service disciplines
+- Industries: Healthcare, Education, Automotive, Defence, R&D, Manufacturing, Finance, Retail, SaaS, Legal, Real Estate, Energy
+
+## Contact
+
+- Email: hello@enticeinnovations.com
+- Website: https://enticeinnovations.com
+
+## Pages
+
+- Home: https://enticeinnovations.com/
+- About: https://enticeinnovations.com/about
+- Services: https://enticeinnovations.com/services
+- Portfolio: https://enticeinnovations.com/portfolio
+- Contact: https://enticeinnovations.com/contact
+- Terms: https://enticeinnovations.com/terms
+- Privacy: https://enticeinnovations.com/privacy
+
+## Service Pages
+
+- Digital Marketing: https://enticeinnovations.com/services/digital-marketing
+- IT Consulting: https://enticeinnovations.com/services/it-consulting
+- AI Consulting: https://enticeinnovations.com/services/ai-consulting
+- Domain & Hosting: https://enticeinnovations.com/services/domain-hosting
+- Tech Infrastructure: https://enticeinnovations.com/services/tech-infrastructure
+- Brand Building: https://enticeinnovations.com/services/brand-building
+- Marketing: https://enticeinnovations.com/services/marketing

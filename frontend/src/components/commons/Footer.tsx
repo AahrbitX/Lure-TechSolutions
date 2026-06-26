@@ -50,7 +50,7 @@ export default function Footer() {
               <img src="/assets/logo/entice-logo.svg" alt="Entice Innovations" className="h-9 w-auto" />
               <span
                 className="text-[#1C1C1C] text-2xl tracking-[-0.01em] leading-none"
-                style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 600 }}
+                style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 500 }}
               >
                 Entice
               </span>
@@ -156,10 +156,10 @@ export default function Footer() {
             © {year} Entice Innovations. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            <a href="#" className="text-xs text-[#9BAABB] hover:text-[#0F67FF] transition-colors duration-200">
+            <a href="/privacy" className="text-xs text-[#9BAABB] hover:text-[#0F67FF] transition-colors duration-200">
               Privacy Policy
             </a>
-            <a href="#" className="text-xs text-[#9BAABB] hover:text-[#0F67FF] transition-colors duration-200">
+            <a href="/terms" className="text-xs text-[#9BAABB] hover:text-[#0F67FF] transition-colors duration-200">
               Terms of Service
             </a>
           </div>

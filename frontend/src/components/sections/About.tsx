@@ -1,15 +1,15 @@
 "use client";
 
-import React from "react";
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import CountUp from "react-countup";
 
 const stats = [
-  { value: "150K+", label: "Leads Generated" },
-  { value: "50+",   label: "Clients Served" },
-  { value: "100K+", label: "Impressions Delivered" },
-  { value: "7",     label: "Core Services" },
+  { value: 150, suffix: "K+", label: "Leads Generated" },
+  { value: 50,  suffix: "+",  label: "Clients Served" },
+  { value: 100, suffix: "K+", label: "Impressions Delivered" },
+  { value: 7,   suffix: "",   label: "Core Services" },
 ];
-
 
 const fadeUp = {
   hidden: { opacity: 0, y: 32 },
@@ -21,10 +21,11 @@ const fadeUp = {
 };
 
 export default function About() {
+  const statsRef = useRef<HTMLDivElement>(null);
+  const statsInView = useInView(statsRef, { once: true, margin: "-80px" });
+
   return (
-    <section
-      className="relative w-full overflow-hidden py-24 sm:py-32 bg-transparent"
-    >
+    <section className="relative w-full overflow-hidden py-24 sm:py-32 bg-transparent">
       <div className="max-w-6xl mx-auto px-6 sm:px-10">
 
         {/* — Eyebrow + Heading — */}
@@ -52,8 +53,9 @@ export default function About() {
           </motion.p>
         </div>
 
-        {/* — Stats row — pure typography, no cards — */}
+        {/* — Stats row — CountUp animation on scroll into view — */}
         <motion.div
+          ref={statsRef}
           variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} custom={3}
           className="grid grid-cols-2 sm:grid-cols-4 gap-0 mb-16 sm:mb-20 border-t border-b border-black/[0.07] py-10"
         >
@@ -68,7 +70,11 @@ export default function About() {
                 className="text-[clamp(2rem,4vw,3rem)] font-normal text-[#1C1C1C] leading-none mb-2"
                 style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
               >
-                {s.value}
+                {statsInView ? (
+                  <CountUp start={0} end={s.value} duration={2.2} suffix={s.suffix} />
+                ) : (
+                  `0${s.suffix}`
+                )}
               </span>
               <span className="text-[#9BAABB] text-xs uppercase tracking-[0.15em]">
                 {s.label}
@@ -76,7 +82,6 @@ export default function About() {
             </div>
           ))}
         </motion.div>
-
 
       </div>
     </section>

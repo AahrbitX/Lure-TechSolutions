@@ -1,37 +1,102 @@
+import type { Metadata } from "next";
+import TopNavbar from "@/components/commons/TopNavbar";
+import Footer from "@/components/commons/Footer";
+import CustomCursor from "@/components/commons/CustomCursor";
+import "./globals.css";
 
-import TopNavbar from "@/components/commons/TopNavbar"
-import Footer from "@/components/commons/Footer"
-import CustomCursor from "@/components/commons/CustomCursor"
-import './globals.css'
-
+export const metadata: Metadata = {
+  metadataBase: new URL("https://enticeinnovations.com"),
+  title: {
+    default: "Entice Innovations — Premium Digital Partner",
+    template: "%s | Entice Innovations",
+  },
+  description:
+    "Entice Innovations: End-to-end digital solutions — AI consulting, IT strategy, digital marketing, brand building, and tech infrastructure for premium clients across 12+ industries.",
+  keywords: [
+    "Entice Innovations",
+    "AI consulting",
+    "IT consulting",
+    "digital marketing",
+    "brand building",
+    "tech infrastructure",
+    "domain hosting",
+    "SEO",
+    "performance marketing",
+    "premium digital agency",
+    "India",
+  ],
+  authors: [{ name: "Entice Innovations", url: "https://enticeinnovations.com" }],
+  creator: "Entice Innovations",
+  publisher: "Entice Innovations",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: "https://enticeinnovations.com",
+    siteName: "Entice Innovations",
+    title: "Entice Innovations — Premium Digital Partner",
+    description:
+      "End-to-end digital solutions — AI consulting, IT strategy, digital marketing, brand building, and tech infrastructure for premium clients.",
+    images: [
+      {
+        url: "/assets/logo/entice-logo.svg",
+        width: 1200,
+        height: 630,
+        alt: "Entice Innovations",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Entice Innovations — Premium Digital Partner",
+    description:
+      "End-to-end digital solutions — AI consulting, IT strategy, digital marketing, brand building, and tech infrastructure for premium clients.",
+    images: ["/assets/logo/entice-logo.svg"],
+    creator: "@enticeinnovations",
+    site: "@enticeinnovations",
+  },
+  icons: {
+    icon: [
+      { url: "/assets/logo/entice-logo.svg", type: "image/svg+xml" },
+    ],
+    shortcut: "/assets/logo/entice-logo.svg",
+    apple: "/assets/logo/entice-logo.svg",
+  },
+  alternates: {
+    canonical: "https://enticeinnovations.com",
+  },
+  category: "technology",
+};
 
 export default function PageLayout({
   children,
-}:{children: React.ReactNode})
-
-{
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <head>
-        <title>Entice Innovations — Premium Digital Partner</title>
-        <meta name="description" content="Entice Innovations: End-to-end digital solutions — AI consulting, IT strategy, digital marketing, brand building, and tech infrastructure for premium clients." />
-        <meta name="keywords" content="Entice Innovations, AI consulting, IT consulting, digital marketing, brand building, tech infrastructure, domain hosting, SEO, premium digital agency, India" />
-        <meta name="author" content="Entice Innovations" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content="Entice Innovations" />
-        <meta property="og:description" content="Entice Innovations: End-to-end digital solutions — AI consulting, IT strategy, digital marketing, brand building, and tech infrastructure for premium clients." />
-        <meta property="og:image" content="/assets/logo/entice-logo.svg" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://enticeinnovations.com" />
-        <link rel="icon" href="/assets/logo/entice-logo.svg" type="image/svg+xml" />
-        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&display=swap"
+          rel="stylesheet"
+        />
       </head>
       <body>
         <CustomCursor />
-        <TopNavbar/>
+        <TopNavbar />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
-  )
+  );
 }
