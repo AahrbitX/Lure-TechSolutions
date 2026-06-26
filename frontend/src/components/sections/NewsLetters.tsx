@@ -12,12 +12,29 @@ const perks = [
 export default function NewsLetters() {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
-    setSubmitted(true);
-    setEmail("");
+    setLoading(true);
+    setError("");
+    try {
+      const res = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Failed to subscribe.");
+      setSubmitted(true);
+      setEmail("");
+    } catch (err: unknown) {
+      setError(err instanceof Error ? err.message : "Something went wrong.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -127,14 +144,21 @@ export default function NewsLetters() {
 
                     <button
                       type="submit"
-                      className="w-full bg-[#1C1C1C] text-white text-sm font-medium py-3.5 rounded-xl hover:bg-[#0F67FF] transition-colors duration-300 flex items-center justify-center gap-2"
+                      disabled={loading}
+                      className="w-full bg-[#1C1C1C] text-white text-sm font-medium py-3.5 rounded-xl hover:bg-[#0F67FF] transition-colors duration-300 flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
                     >
-                      Subscribe now
-                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                      </svg>
+                      {loading ? "Subscribing…" : "Subscribe now"}
+                      {!loading && (
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                      )}
                     </button>
                   </form>
+
+                  {error && (
+                    <p className="text-red-500 text-xs mt-3 text-center">{error}</p>
+                  )}
 
                   <p className="text-[#C0CDD8] text-xs mt-5 text-center">
                     No spam. Unsubscribe at any time.
