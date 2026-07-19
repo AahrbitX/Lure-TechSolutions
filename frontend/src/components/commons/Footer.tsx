@@ -81,6 +81,15 @@ export default function Footer() {
                 </span>
                 +91 99948 60392
               </a>
+              <address className="not-italic flex items-start gap-2.5 text-[#6B7A8D]">
+                <span className="w-4 h-4 flex-shrink-0 text-[#C0CDD8] mt-0.5">
+                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </span>
+                <span className="text-sm leading-relaxed">Nagercoil, Tamil Nadu<br />Near Tiruvananthapuram, India</span>
+              </address>
             </div>
           </div>
 
@@ -126,7 +135,7 @@ export default function Footer() {
 
             <div className="flex gap-3 mb-8">
               {socials.map(({ label, href, path }) => (
-                <a key={label} href={href} target="_blank" rel="noopener noreferrer"
+                <a key={label} href={href} target="_blank" rel="nofollow noopener noreferrer"
                   aria-label={label}
                   className="w-9 h-9 rounded-full border border-black/[0.08] bg-white/60 hover:border-[#0F67FF] hover:bg-[#0F67FF] flex items-center justify-center transition-all duration-200 group"
                 >
